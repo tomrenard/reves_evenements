@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "kutp3su7",
+    "projectId": "sw1s8e5z",
     "dataset": "production"
   },
   "project": {
-    "name": "slicks-slices"
+    "name": "reves-evenements"
   },
   "plugins": [
     "@sanity/base",
