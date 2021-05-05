@@ -9,8 +9,8 @@ const NavStyles = styled.nav`
       text-align: center;
       list-style: none;
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-      grid-gap: 2rem;
+      grid-template-columns: 4fr 1fr 1fr 1fr 1.3fr;
+      grid-gap: 0.5rem;
       align-items: center;
     }
   a {
@@ -18,7 +18,7 @@ const NavStyles = styled.nav`
       text-decoration: none;
       display: block;
       &:hover {
-        color: var(--orange);
+        color: var(--blue);
       }
   }
 `;
