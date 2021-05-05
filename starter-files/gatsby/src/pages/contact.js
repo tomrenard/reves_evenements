@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function HomePage() {
+export default function Contact() {
   return (
     <div>
-      <p>HomePage</p>
+      <p>Contact</p>
     </div>
   );
 }
