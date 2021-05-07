@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const FooterStyles = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   ul {
     list-style: none;
   }
@@ -28,14 +28,8 @@ export default function Footer() {
           <li>Voyages incentives</li>
         </ul>
         <ul>
-          <li className="title">Destinations</li>
-          <li>Portugal</li>
-          <li>France</li>
-        </ul>
-        <ul>
           <li className="title">Plan du site</li>
           <li><Link to="/">Événements</Link></li>
-          <li><Link to="/">Destinations</Link></li>
           <li><Link to="/about">À propos</Link></li>
         </ul>
       </FooterStyles>

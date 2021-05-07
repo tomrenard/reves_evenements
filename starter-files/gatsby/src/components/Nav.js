@@ -9,7 +9,7 @@ const NavStyles = styled.nav`
       text-align: center;
       list-style: none;
       display: grid;
-      grid-template-columns: 4fr 1fr 1fr 1fr 1.3fr;
+      grid-template-columns: 4fr 1fr 1fr 1.3fr;
       grid-gap: 0.5rem;
       align-items: center;
     }
@@ -32,9 +32,6 @@ export default function Nav() {
         </li>
         <li>
           <Link to="/">Événements</Link>
-        </li>
-        <li>
-          <Link to="/">Destinations</Link>
         </li>
         <li>
           <Link to="/about">À propos</Link>
