@@ -6,7 +6,7 @@ export default {
   siteMetadata: {
     title: `Rêves d'événements`,
     siteUrl: 'https://www.reves-evenements.com',
-    description: 'Agence évémentiel à Bruz',
+    description: 'Agence événementiel à Bruz',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
