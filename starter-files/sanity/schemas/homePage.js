@@ -160,10 +160,5 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: 'contenttesti1',
-      title: 'Content Testimonial 1',
-      type: 'string',
-    },
   ]
 };
