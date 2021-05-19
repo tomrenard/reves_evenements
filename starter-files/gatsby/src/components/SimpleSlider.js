@@ -9,12 +9,13 @@ import styled from 'styled-components';
 const ImgSliderStyles = styled.div`
   width: 100%;
   Img {
-    max-width: 60rem;
+    max-width: 80rem;
     width: 100%;
+    height: 30px;
     margin: auto auto;
     margin-top: 2em;
-    max-height: 30rem;
     margin-bottom
+    max-height: 35rem;
     position: relative;
     z-index: -100;
   }
@@ -26,7 +27,6 @@ const ImgSliderStyles = styled.div`
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 2em;
-    padding-left: 1em;
   }
 `;
 
