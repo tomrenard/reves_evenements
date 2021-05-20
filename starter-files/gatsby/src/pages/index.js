@@ -9,9 +9,13 @@ import SimpleSlider from '../components/SimpleSlider';
 
 const Bloc1Styles = styled.div`
   display: grid;
+  padding: 0 1em;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   margin-top: 2em;
+  .bloc1-left {
+    padding-top: 2em;
+  }
 `;
 
 export default function HomePage({ data }) {
@@ -26,7 +30,7 @@ export default function HomePage({ data }) {
         </div>
         <Img fluid={content.image1.asset.fluid} alt={content.title1} />
       </Bloc1Styles>
-      <SimpleSlider />
+      <SimpleSlider/>
       <ContactForm />
     </>
   );

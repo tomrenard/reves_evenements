@@ -6,27 +6,28 @@ import "slick-carousel/slick/slick-theme.css";
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
+const SliderStyles = styled.div`
+  max-width: 35em;
+  margin: 1em 12em;
+  .slick-arrow, .slick-next {
+    background: transparent;
+  }
+  .slick-next:before, .slick-prev:before {
+    color: #000;
+  }
+`;
+
 const ImgSliderStyles = styled.div`
-  width: 100%;
   Img {
-    max-width: 80rem;
-    width: 100%;
-    height: 30px;
-    margin: auto auto;
-    margin-top: 2em;
-    margin-bottom
-    max-height: 35rem;
-    position: relative;
-    z-index: -100;
+    border-radius: 1em;
   }
   h3 {
     position: absolute;
-    z-index: 100;
-    bottom: 1em;
-    text-align: center;
+    bottom: 10px;
+    padding: 5px 10px;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 2em;
+    font-weight: bold;
   }
 `;
 
@@ -75,19 +76,23 @@ export default function SimpleSlider() {
     slidesToScroll: 1
   };
   return (
-    <Slider {...settings}>
-      <ImgSliderStyles>
-        <Img fluid={content.imagelastevent1.asset.fluid} alt={content.event1} />
-        <h3>{content.event1}</h3>
-      </ImgSliderStyles>
-      <ImgSliderStyles>
-        <Img fluid={content.imagelastevent2.asset.fluid} alt={content.event2} />
-        <h3>{content.event2}</h3>
-      </ImgSliderStyles>
-      <ImgSliderStyles>
-        <Img fluid={content.imagelastevent3.asset.fluid} alt={content.event3} />
-        <h3>{content.event3}</h3>
-      </ImgSliderStyles>
-    </Slider>
+      <>
+      <SliderStyles>
+        <Slider {...settings}>
+          <ImgSliderStyles>
+            <Img fluid={content.imagelastevent1.asset.fluid} alt={content.event1} />
+            <h3>{content.event1}</h3>
+          </ImgSliderStyles>
+          <ImgSliderStyles>
+            <Img fluid={content.imagelastevent2.asset.fluid} alt={content.event2} />
+            <h3>{content.event2}</h3>
+          </ImgSliderStyles>
+          <ImgSliderStyles>
+            <Img fluid={content.imagelastevent3.asset.fluid} alt={content.event3} />
+            <h3>{content.event3}</h3>
+          </ImgSliderStyles>
+        </Slider>
+      </SliderStyles>
+      </>
   );
 }
