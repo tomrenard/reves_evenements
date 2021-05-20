@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const NavStyles = styled.nav`
   ul {
-      margin: 0;
+      margin: 1em 0;
       padding: 0;
       text-align: center;
       list-style: none;

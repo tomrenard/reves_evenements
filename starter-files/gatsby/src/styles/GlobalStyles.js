@@ -17,6 +17,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 1rem;
+    height: 100%;
+    margin: 0;
   }
 
   button {

@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import SimpleSlider from '../components/SimpleSlider';
-
+import EventsGammes from '../components/EventsGammes';
 
 const Bloc1Styles = styled.div`
   display: grid;
@@ -16,6 +16,14 @@ const Bloc1Styles = styled.div`
   .bloc1-left {
     padding-top: 2em;
   }
+`;
+
+const Bloc2Styles = styled.div`
+  margin: 2em 0;
+  background: #C7B9FF;
+  width: 100%;
+  z-index: 100;
+  padding: 1em 1em;
 `;
 
 export default function HomePage({ data }) {
@@ -30,7 +38,11 @@ export default function HomePage({ data }) {
         </div>
         <Img fluid={content.image1.asset.fluid} alt={content.title1} />
       </Bloc1Styles>
-      <SimpleSlider/>
+      <Bloc2Styles>
+        <h2>{content.title2}</h2>
+        <SimpleSlider/>
+      </Bloc2Styles>
+      <EventsGammes />
       <ContactForm />
     </>
   );
