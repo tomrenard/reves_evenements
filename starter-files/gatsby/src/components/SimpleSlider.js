@@ -7,13 +7,16 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const SliderStyles = styled.div`
+  width: 35em;
+  margin: 1em auto;
   max-width: 35em;
-  margin: 1em 12em;
   .slick-arrow, .slick-next {
     background: transparent;
   }
   .slick-next:before, .slick-prev:before {
     color: #000;
+  }
+  .slider-hp {
   }
 `;
 

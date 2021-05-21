@@ -12,14 +12,14 @@ const Bloc1Styles = styled.div`
   padding: 0 1em;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
-  margin-top: 2em;
+  margin: 1em;
   .bloc1-left {
     padding-top: 2em;
   }
 `;
 
 const Bloc2Styles = styled.div`
-  margin: 2em 0;
+  margin: 1em 0 0 0;
   background: #C7B9FF;
   width: 100%;
   z-index: 100;
