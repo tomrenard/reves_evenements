@@ -74,7 +74,6 @@ export default function EventsGammes() {
   }
 `)
   const content = data.allSanityHomePage.nodes[0];
-  console.log(content);
   return (
     <GammesStyles>
       <h2>{content.title3}</h2>

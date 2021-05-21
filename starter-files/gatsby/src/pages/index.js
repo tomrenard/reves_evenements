@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import SimpleSlider from '../components/SimpleSlider';
 import EventsGammes from '../components/EventsGammes';
+import TestimonialHomePage from '../components/TestimonialHomePage';
 
 const Bloc1Styles = styled.div`
   display: grid;
@@ -43,6 +44,7 @@ export default function HomePage({ data }) {
         <SimpleSlider/>
       </Bloc2Styles>
       <EventsGammes />
+      <TestimonialHomePage />
       <ContactForm />
     </>
   );
