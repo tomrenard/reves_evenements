@@ -46,7 +46,7 @@ export default function TestimonialHomePage() {
       </div>
       <div className="content-testi1">
         <p>{content.testi1}</p>
-        <p>{content.authortesti1}</p>
+        <p><strong>{content.authortesti1}</strong></p>
       </div>
     </TestimonialHomePageStyles>
   );
