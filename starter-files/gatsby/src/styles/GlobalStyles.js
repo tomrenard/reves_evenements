@@ -3,11 +3,6 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   :root {
     --gold: #C4AF9B;
-    --green: #83c5be;
-    --grey: #edf6f9;
-    --pink: #ffddd2;
-    --orange: #e29578;
-    --black: #000000;
   }
 
   .gatsby-image-wrapper img[src*=base64\\,] {
@@ -19,6 +14,10 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     height: 100%;
     margin: 0;
+  }
+
+  h1,h2,h3,h4,h5 {
+    margin: 0 auto;
   }
 
   button {

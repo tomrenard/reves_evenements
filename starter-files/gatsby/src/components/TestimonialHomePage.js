@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const TestimonialHomePageStyles = styled.div`
   display: grid;
-  background: #C7B9FF;
+  background: var(--gold);
   padding: 2em 1em;
   grid-template-columns: 1fr 2fr;
   .img-testi1 {
@@ -18,6 +18,9 @@ const TestimonialHomePageStyles = styled.div`
   }
   .content-testi1 {
     margin: auto auto;
+  }
+  p {
+    font-weight: 100;
   }
 `;
 
@@ -45,7 +48,7 @@ export default function TestimonialHomePage() {
         <Img fluid={content.imagetesti1.asset.fluid} alt={content.authortesti1} />
       </div>
       <div className="content-testi1">
-        <p>{content.testi1}</p>
+        <p>"{content.testi1}"</p>
         <p><strong>{content.authortesti1}</strong></p>
       </div>
     </TestimonialHomePageStyles>

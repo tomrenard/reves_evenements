@@ -10,6 +10,7 @@ import TestimonialHomePage from '../components/TestimonialHomePage';
 
 const Bloc1Styles = styled.div`
   padding: 0 1em;
+  max-width: 50em;
   margin: 0 auto;
   margin-bottom: 3em;
   text-align: center;
@@ -24,11 +25,17 @@ const Bloc1Styles = styled.div`
 `;
 
 const Bloc2Styles = styled.div`
-  margin: 1em 0 0 0;
-  background: #C7B9FF;
+  background: var(--gold);
   width: 100%;
   z-index: 100;
   padding: 1em 1em;
+  padding-bottom: 2em;
+  text-align: center;
+  h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin: 0.2em 0;
+  }
 `;
 
 export default function HomePage({ data }) {

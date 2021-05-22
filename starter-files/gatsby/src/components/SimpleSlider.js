@@ -7,9 +7,8 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const SliderStyles = styled.div`
-  width: 35em;
   margin: 1em auto;
-  max-width: 35em;
+  max-width: 50em;
   .slick-arrow, .slick-next {
     background: transparent;
   }
@@ -26,12 +25,12 @@ const ImgSliderStyles = styled.div`
   }
   h3 {
     position: absolute;
-
     bottom: 10px;
     padding: 5px 5px;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    font-weight: 300;
+    font-size: 2em;
   }
 `;
 
