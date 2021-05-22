@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const Typography = createGlobalStyle`
   @font-face {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
   }
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     color: var(--black);
   }
   p, li {
