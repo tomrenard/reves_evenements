@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --blue: #006d77;
+    --gold: #C4AF9B;
     --green: #83c5be;
     --grey: #edf6f9;
     --pink: #ffddd2;
@@ -22,8 +22,27 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    font: Oxygen, 'sans-serif';
+    a {
+      color: white;
+    }
+    font: 'Poppins', sans-serif;
     font-size: 1rem;
+    justify-content: center;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 40px;
+    line-height: 1;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--gold);
+    }
   }
 
   .center {

@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import logo from '../assets/images/logoBindiv.png'
 
 const NavStyles = styled.nav`
+  margin-bottom: 4em;
+  .logo img {
+    width: 48px;
+    display: block;
+    margin-left: 2em;
+  }
   ul {
       margin: 1em 0;
       padding: 0;
@@ -14,12 +21,10 @@ const NavStyles = styled.nav`
       align-items: center;
     }
   a {
-      font-size: 1rem;
+      font-size: 0.9em;
+      font-weight: 400;
       text-decoration: none;
       display: block;
-      &:hover {
-        color: var(--blue);
-      }
   }
 `;
 
@@ -27,8 +32,8 @@ export default function Nav() {
   return (
     <NavStyles>
       <ul>
-        <li>
-          <Link to="/">Logo</Link>
+        <li className='logo'>
+          <Link to="/"><img src={logo} alt="" /></Link>
         </li>
         <li>
           <Link to="/">Événements</Link>

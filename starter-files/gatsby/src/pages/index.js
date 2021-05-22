@@ -9,14 +9,18 @@ import EventsGammes from '../components/EventsGammes';
 import TestimonialHomePage from '../components/TestimonialHomePage';
 
 const Bloc1Styles = styled.div`
-  display: grid;
   padding: 0 1em;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  margin: 1em;
-  .bloc1-left {
-    padding-top: 2em;
-  }
+  margin: 0 auto;
+  margin-bottom: 3em;
+  text-align: center;
+  h1 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 0;
+    }
+  p {
+    font-weight: 100;
+    }
 `;
 
 const Bloc2Styles = styled.div`
@@ -32,12 +36,9 @@ export default function HomePage({ data }) {
   return (
     <>
       <Bloc1Styles>
-        <div className="bloc1-left">
           <h1>{content.title1}</h1>
           <p>{content.text1}</p>
           <button className="contact-button">Obtenir un devis</button>
-        </div>
-        <Img fluid={content.image1.asset.fluid} alt={content.title1} />
       </Bloc1Styles>
       <Bloc2Styles>
         <h2>{content.title2}</h2>
