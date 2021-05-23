@@ -24,9 +24,17 @@ const Bloc1Styles = styled.div`
     }
 `;
 
-const BlocCstStyles = styled.div`
+const Section2Styles = styled.section`
   background-color: rgb(251, 251, 251);
-  padding: 1em;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 1em 40px;
+`;
+
+const BlocCstStyles = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,12 +44,11 @@ const BlocCstStyles = styled.div`
     line-height: 1.25;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 16px;
     max-width: 560px;
   }
 span {
-  font-size: 1.5rem;
   line-height: 1.25;
   font-weight: 900;
   color: var(--gold);
@@ -50,27 +57,31 @@ span {
 
 const LogoListStyles = styled.div`
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  opacity: 0.4;
   width: 100%;
-  margin: 0 1em;
+  margin-left: -16px;
+  margin-right: -16px;
+  opacity: 0.4;
+  .gatsby-image-wrapper {
+      min-width: 100px;
+      max-width: 120px;
+      width: auto;
+      max-height: 64px;
+  }
   .logocst {
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 64px;
-    padding: 0 16px;
+    height: 100%;
   }
   Img {
     align-self: center;
-    display: block;
-    max-width: 120px;
-    width: auto;
-    max-height: 30px;
+    display: block !important;
+    width: 120px;
+    height: 64px;
   }
 `;
 
@@ -94,6 +105,7 @@ export default function HomePage({ data }) {
           <p>{content.text1}</p>
           <button className="contact-button">Obtenir un devis</button>
       </Bloc1Styles>
+      <Section2Styles>
       <BlocCstStyles>
         <h3>Des événements professionnels organisés pour plus de <span>10 000</span> participants depuis 2009</h3>
         <LogoListStyles>
@@ -117,6 +129,7 @@ export default function HomePage({ data }) {
            </div>
         </LogoListStyles>
       </BlocCstStyles>
+      </Section2Styles>
       <Bloc2Styles>
         <h2>{content.title2}</h2>
         <SimpleSlider/>
@@ -152,42 +165,42 @@ export const query = graphql`
         }
         logocst1 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst2 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst3 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst4 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst5 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst6 {
           asset {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
