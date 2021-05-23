@@ -22,6 +22,54 @@ export default {
       },
     },
     {
+      name: 'logocst1',
+      title: 'Logo cst 1',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'logocst2',
+      title: 'Logo cst 2',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'logocst3',
+      title: 'Logo cst 3',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'logocst4',
+      title: 'Logo cst 4',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'logocst5',
+      title: 'Logo cst 5',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'logocst6',
+      title: 'Logo cst 6',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'title2',
       title: 'Title 2',
       type: 'string',
