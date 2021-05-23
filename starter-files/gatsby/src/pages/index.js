@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import ContactForm from '../components/ContactForm';
-import Img from 'gatsby-image';
+import Img from 'gatsby-image/withIEPolyfill';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import SimpleSlider from '../components/SimpleSlider';
@@ -31,7 +31,7 @@ const Section2Styles = styled.section`
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding: 1em 40px;
+  padding: 2em 40px;
 `;
 
 const BlocCstStyles = styled.div`
@@ -66,7 +66,7 @@ const LogoListStyles = styled.div`
   opacity: 0.4;
   .gatsby-image-wrapper {
       min-width: 100px;
-      max-width: 120px;
+      max-width: 100px;
       width: auto;
       max-height: 64px;
   }
@@ -78,10 +78,10 @@ const LogoListStyles = styled.div`
     height: 100%;
   }
   Img {
-    align-self: center;
+    align-self: center !important;
     display: block !important;
-    width: 120px;
-    height: 64px;
+    width: auto;
+    height: 100%;
   }
 `;
 
@@ -110,22 +110,22 @@ export default function HomePage({ data }) {
         <h3>Des événements professionnels organisés pour plus de <span>10 000</span> participants depuis 2009</h3>
         <LogoListStyles>
           <div className='logocst'>
-            <Img fluid={content.logocst1.asset.fluid} alt='logo1' />
+            <Img objectFit='contain' fluid={content.logocst1.asset.fluid} alt='logo1' />
           </div>
           <div className='logocst'>
-            <Img fluid={content.logocst2.asset.fluid} alt='logo2' />
+            <Img objectFit='contain' fluid={content.logocst2.asset.fluid} alt='logo2' />
           </div>
           <div className='logocst'>
-            <Img fluid={content.logocst3.asset.fluid} alt='logo3' />
+            <Img objectFit='contain' fluid={content.logocst3.asset.fluid} alt='logo3' />
           </div>
           <div className='logocst'>
-            <Img fluid={content.logocst4.asset.fluid} alt='logo4' />
+            <Img objectFit='contain' fluid={content.logocst4.asset.fluid} alt='logo4' />
           </div>
           <div className='logocst'>
-          <Img fluid={content.logocst5.asset.fluid} alt='logo5' />
+          <Img objectFit='contain' fluid={content.logocst5.asset.fluid} alt='logo5' />
           </div>
           <div className='logocst'>
-          <Img fluid={content.logocst6.asset.fluid} alt='logo6' />
+          <Img objectFit='contain' fluid={content.logocst6.asset.fluid} alt='logo6' />
            </div>
         </LogoListStyles>
       </BlocCstStyles>
