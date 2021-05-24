@@ -65,23 +65,26 @@ const LogoListStyles = styled.div`
   margin-right: -16px;
   opacity: 0.4;
   .gatsby-image-wrapper {
-      min-width: 100px;
-      max-width: 100px;
-      width: auto;
-      max-height: 64px;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 64px;
+    display: block;
+    align-self: center;
   }
   .logocst {
     display: flex;
+    min-width: 100px;
+    max-width: 100px;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
   Img {
     align-self: center !important;
     display: block !important;
-    width: auto;
-    height: 100%;
+    width: 100% !important;
+    height: auto;
   }
 `;
 
