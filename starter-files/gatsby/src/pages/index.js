@@ -47,7 +47,6 @@ export default function HomePage({ data }) {
       </Bloc1Styles>
       <BlocLogoCustomers />
       <Bloc2Styles>
-        <h2>{content.title2}</h2>
         <SimpleSlider/>
       </Bloc2Styles>
       <EventsGammes />
@@ -75,48 +74,6 @@ export const query = graphql`
         imagelastevent1 {
           asset {
             fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst1 {
-          asset {
-            fluid(maxWidth: 120) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst2 {
-          asset {
-            fluid(maxWidth: 120) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst3 {
-          asset {
-            fluid(maxWidth: 120) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst4 {
-          asset {
-            fluid(maxWidth: 120) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst5 {
-          asset {
-            fluid(maxWidth: 120) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        logocst6 {
-          asset {
-            fluid(maxWidth: 120) {
               ...GatsbySanityImageFluid
             }
           }
