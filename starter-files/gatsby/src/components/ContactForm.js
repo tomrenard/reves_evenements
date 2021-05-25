@@ -2,22 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionContactFormStyles = styled.section`
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 0px auto;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  width: 422px;
+  max-width: 100%;
   h2 {
-    margin: 0 auto;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0px 32px;
   }
 `;
 
 const ContactFormStyles = styled.form`
   display: flex;
-  max-width: 150px;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 1em;
   gap: 1em;
@@ -32,7 +32,7 @@ const ContactFormStyles = styled.form`
     padding-left: 12px;
   }
   button {
-    width: 100%;
+    width: 50%;
   }
 `;
 
