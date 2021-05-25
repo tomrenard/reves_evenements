@@ -5,14 +5,17 @@ const SectionContactFormStyles = styled.section`
   max-width: 1200px;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h2 {
     margin: 0 auto;
-    tex
   }
 `;
 
 const ContactFormStyles = styled.form`
   display: flex;
+  max-width: 150px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
