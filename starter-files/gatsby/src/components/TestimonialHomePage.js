@@ -6,7 +6,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const SectionTestimonialHomePageStyles = styled.section`
   display: flex;
-  justify-content: flex;
+  justify-content: center;
   padding: 0px 40px;
 `;
 
