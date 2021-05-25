@@ -27,6 +27,8 @@ export default function Footer() {
             <li className="title">Événements</li>
             <li>Séminaires</li>
             <li>Voyages incentives</li>
+            <li>Teams buildings</li>
+            <li>Soirées d'entreprise</li>
           </ul>
           <ul>
             <li className="title">Plan du site</li>
