@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import logo from '../assets/images/logoBindiv.png'
 
 const NavStyles = styled.nav`
-  margin-bottom: 4em;
+position: fixed;
+z-index: 100;
+background-color: white;
+width: 100%;
+top: 0;
   .logo img {
     width: 48px;
     display: block;
