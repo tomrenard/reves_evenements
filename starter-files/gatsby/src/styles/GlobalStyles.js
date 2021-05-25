@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   :root {
     --gold: #C4AF9B;
+    --blue: #006BFF;
   }
 
   .gatsby-image-wrapper img[src*=base64\\,] {
@@ -40,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     cursor: pointer;
     &:hover {
-      background-color: var(--gold);
+      background-color: var(--blue);
     }
   }
 

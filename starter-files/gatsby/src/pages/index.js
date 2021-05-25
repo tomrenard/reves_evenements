@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm';
 import Img from 'gatsby-image/withIEPolyfill';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import SimpleSlider from '../components/SimpleSlider';
+import LastEvents from '../components/LastEvents';
 import Header from '../components/Header';
 import EventsGammes from '../components/EventsGammes';
 import BlocLogoCustomers from '../components/BlocLogoCustomers';
@@ -15,8 +15,7 @@ export default function HomePage({ data }) {
     <>
       <Header />
       <BlocLogoCustomers />
-      <SimpleSlider/>
-      <EventsGammes />
+      <LastEvents/>
       <TestimonialHomePage />
       <ContactForm />
     </>

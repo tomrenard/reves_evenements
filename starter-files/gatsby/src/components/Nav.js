@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import logo from '../assets/images/logoBindiv.png'
+import logo from '../assets/images/download.svg'
 
 const NavStyles = styled.nav`
 position: fixed;
@@ -10,7 +10,7 @@ background-color: white;
 width: 100%;
 top: 0;
   .logo img {
-    width: 48px;
+    width: 165px;;
     display: block;
     margin-left: 2em;
   }

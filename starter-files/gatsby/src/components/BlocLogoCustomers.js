@@ -1,68 +1,49 @@
 import React from 'react';
-import Img from 'gatsby-image/withIEPolyfill';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const Section2Styles = styled.section`
   background-color: rgb(251, 251, 251);
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding: 2em 40px;
+  padding: 2.5em 40px;
 `;
 
 const BlocCstStyles = styled.div`
   width: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   flex-direction: column;
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8em;
     line-height: 1.25;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 16px;
     max-width: 560px;
   }
 span {
   line-height: 1.25;
   font-weight: 900;
-  color: var(--gold);
+  color: var(--blue);
 }
 `;
 
 const LogoListStyles = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-left: -16px;
-  margin-right: -16px;
+  justify-content: space-between;
   opacity: 0.4;
-  .gatsby-image-wrapper {
-    min-width: 100px;
-    max-width: 100px;
-    max-height: 64px;
-    display: block;
-    align-self: center;
-  }
+  width: 100%;
   .logocst {
-    display: flex;
-    min-width: 100px;
-    max-width: 100px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 100px;
     height: auto;
   }
   Img {
-    align-self: center !important;
-    display: block !important;
-    width: 100% !important;
+    width: 100%;
     height: auto;
   }
 `;
@@ -73,42 +54,42 @@ export default function BlocLogoCustomers() {
       nodes {
         logocst1 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst2 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst3 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst4 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst5 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
         }
         logocst6 {
           asset {
-            fluid(maxWidth: 120) {
+            fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
           }
@@ -121,25 +102,22 @@ export default function BlocLogoCustomers() {
   return (
      <Section2Styles>
       <BlocCstStyles>
-        <h3>Des événements professionnels organisés pour plus de <span>10 000</span> participants depuis 2009</h3>
+        <h3>Des événements professionnels organisés pour plus de <span>100 000</span> participants</h3>
         <LogoListStyles>
           <div className='logocst'>
-            <Img objectFit='contain' fluid={content.logocst1.asset.fluid} alt='logo1' />
+            <Img fluid={content.logocst1.asset.fluid} alt='logo1' />
           </div>
           <div className='logocst'>
-            <Img objectFit='contain' fluid={content.logocst2.asset.fluid} alt='logo2' />
+            <Img fluid={content.logocst3.asset.fluid} alt='logo3' />
           </div>
           <div className='logocst'>
-            <Img objectFit='contain' fluid={content.logocst3.asset.fluid} alt='logo3' />
+            <Img fluid={content.logocst4.asset.fluid} alt='logo4' />
           </div>
           <div className='logocst'>
-            <Img objectFit='contain' fluid={content.logocst4.asset.fluid} alt='logo4' />
+          <Img fluid={content.logocst5.asset.fluid} alt='logo5' />
           </div>
           <div className='logocst'>
-          <Img objectFit='contain' fluid={content.logocst5.asset.fluid} alt='logo5' />
-          </div>
-          <div className='logocst'>
-          <Img objectFit='contain' fluid={content.logocst6.asset.fluid} alt='logo6' />
+          <Img fluid={content.logocst6.asset.fluid} alt='logo6' />
            </div>
         </LogoListStyles>
       </BlocCstStyles>

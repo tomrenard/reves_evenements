@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const SliderStyles = styled.div`
   margin: 1em auto;
-  max-width: 50em;
+  max-width: 30em;
   .slick-arrow, .slick-next {
     background: transparent;
   }
@@ -27,10 +27,11 @@ const ImgSliderStyles = styled.div`
     position: absolute;
     bottom: 10px;
     padding: 5px 5px;
+    margin-left: 80px;
     color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    font-weight: 300;
-    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-weight: 400;
+    font-size: 1.1em;
   }
 `;
 
@@ -69,8 +70,8 @@ export default function SimpleSlider() {
 `)
   const content = data.allSanityHomePage.nodes[0];
   const settings = {
-    dots: true,
-    arrows: true,
+    dots: false,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,

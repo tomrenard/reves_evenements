@@ -13,24 +13,21 @@ const ContactFormStyles = styled.form`
 export default function ContactForm() {
   return (
     <>
+      <h2>Obtenir un devis gratuit !</h2>
       <ContactFormStyles>
         <label>
-          Nom et prénom
-          <input type="text" name="firstName-lastname" />
+          <input type="text" placeHolder="Votre nom et prénom" name="firstName-lastname" />
         </label>
         <label>
-          Email
-          <input type="text" name="email" />
+          <input type="text" placeHolder="Votre email" name="email" />
         </label>
         <label>
-          Type d'événements
-          <input type="text" name="type" />
+          <input type="text" placeHolder="Sélectionner le type d'événements" name="type" />
         </label>
         <label>
-          Message
-          <input type="text" name="text-input" />
+          <input type="text" placeHolder="Votre message" name="text-input" />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Envoyer</button>
       </ContactFormStyles>
     </>
   );
