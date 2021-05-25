@@ -22,7 +22,7 @@ const BlocCstStyles = styled.div`
     text-align: center;
     color: rgb(0, 0, 0);
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     max-width: 560px;
   }
 span {
