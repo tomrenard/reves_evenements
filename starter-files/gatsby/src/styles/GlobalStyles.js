@@ -21,6 +21,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
 
+  ol, ul {
+    list-style: none;
+  }
+
   button {
     a {
       color: white;
