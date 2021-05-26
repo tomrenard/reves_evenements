@@ -34,6 +34,7 @@ const NavStyles = styled.nav`
   }
   ul {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: auto;
     li {
@@ -59,12 +60,12 @@ export default function Nav() {
           <li>
             <Link to="/about">À propos</Link>
           </li>
+          <li>
+            <button>
+              <Link to="/contact">Nous contacter</Link>
+            </button>
+          </li>
         </ul>
-        <div>
-          <button>
-            <Link to="/contact">Nous contacter</Link>
-          </button>
-        </div>
       </NavStyles>
     </SectionNavStyles>
   );

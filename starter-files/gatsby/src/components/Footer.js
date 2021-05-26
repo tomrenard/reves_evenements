@@ -5,6 +5,8 @@ import styled from 'styled-components';
 const FooterStyles = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
   ul {
     list-style: none;
   }
