@@ -3,8 +3,23 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import logo from '../assets/images/download.svg'
 
+const SectionNavStyles = styled.section`
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
 const NavStyles = styled.nav`
 position: fixed;
+margin: 0 40px;
 z-index: 100;
 background-color: white;
 width: 100%;
