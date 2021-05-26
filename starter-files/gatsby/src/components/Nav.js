@@ -15,9 +15,6 @@ const SectionNavStyles = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  .scrolled {
-  box-shadow: rgb(0 0 0 / 4%) 0px 4px 4px;
-  }
 `;
 
 const NavStyles = styled.nav`

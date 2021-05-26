@@ -42,16 +42,16 @@ export default function ContactForm() {
       <h2>Obtenir un devis gratuit !</h2>
       <ContactFormStyles>
         <label>
-          <input type="text" placeHolder="Votre nom et prénom" name="firstName-lastname" />
+          <input type="text" placeholder="Votre nom et prénom" name="firstName-lastname" />
         </label>
         <label>
-          <input type="text" placeHolder="Votre email" name="email" />
+          <input type="text" placeholder="Votre email" name="email" />
         </label>
         <label>
-          <input type="text" placeHolder="Type d'événements" name="type" />
+          <input type="text" placeholder="Type d'événements" name="type" />
         </label>
         <label>
-          <input type="text" placeHolder="Votre message" name="text-input" />
+          <input type="text" placeholder="Votre message" name="text-input" />
         </label>
         <button type="submit">Envoyer</button>
       </ContactFormStyles>

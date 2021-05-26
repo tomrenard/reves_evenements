@@ -11,6 +11,10 @@ const GlobalStyles = createGlobalStyle`
     image-rendering: pixelated;
   }
 
+  .scrolled {
+    box-shadow: rgb(0 0 0 / 4%) 0px 4px 4px;
+  }
+
   body {
     font-size: 1rem;
     height: 100%;
