@@ -22,9 +22,10 @@ const DivTestimonialHomePageStyles = styled.div`
 const ContainerImgTestimonialHomePageStyles = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 40px;
   overflow: hidden;
+  border-radius: 40px;
   max-width: 390px;
+  max-height: 390px;
 `;
 
 const ContentTestimonialHomePageStyles = styled.div`
@@ -38,7 +39,7 @@ const ContentTestimonialHomePageStyles = styled.div`
     color: rgb(102, 102, 102);
   }
   h4 {
-    font-size: 1.9em;
+    font-size: 1.8em;
   }
   p {
     font-weight: 600;
@@ -65,43 +66,67 @@ const LinkTestimonialHomePageStyles = styled.div`
       border-radius: 10px;
     }
   }
+`;
+
+const SelectorDivStyles = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 100px;
 
 `;
 
-export default function TestimonialHomePage() {
-  const data = useStaticQuery(graphql`query TestimonialHomePage {
-    allSanityHomePage {
-      nodes {
-        testi1
-        authortesti1
-        imagetesti1 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
-    }
+const SelectorStyles = styled.div`
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  top: -90px;
+  margin-right: 14px;
+  left: -10px;
+  background-color: lightgray;
+  &.active {
+    background-color: blue;
   }
-`)
-  const content = data.allSanityHomePage.nodes[0];
+`;
+
+export default function TestimonialHomePage( { testimonials }) {
+  let selectorClicked = false;
+  const handleClick = () => {
+    selectorClicked = !selectorClicked;
+  }
+  const testimonialsFiltered = testimonials.filter(testimonial => testimonial.company === 'Cogent Data');
   return (
-    <SectionTestimonialHomePageStyles>
-      <DivTestimonialHomePageStyles>
-        <ContainerImgTestimonialHomePageStyles>
-          <Img fluid={content.imagetesti1.asset.fluid} alt={content.authortesti1} />
-        </ContainerImgTestimonialHomePageStyles>
-        <ContentTestimonialHomePageStyles>
-          <h6>Cogent Data</h6>
-          <h4>"{content.testi1}"</h4>
-          <p>{content.authortesti1}</p>
-          <LinkTestimonialHomePageStyles>
-            <a href="/">Découvrir nos prestations</a>
-            <button href="/"><AiOutlineArrowRight /></button>
-          </LinkTestimonialHomePageStyles>
-        </ContentTestimonialHomePageStyles>
-      </DivTestimonialHomePageStyles>
-    </SectionTestimonialHomePageStyles>
+    <>
+      {testimonialsFiltered.map(testimonial => (
+      <div key={testimonial._id}>
+        <SectionTestimonialHomePageStyles>
+          <DivTestimonialHomePageStyles>
+            <ContainerImgTestimonialHomePageStyles>
+              <Img fluid={testimonial.imagetestimonial.asset.fluid} alt={testimonial.author} />
+            </ContainerImgTestimonialHomePageStyles>
+            <ContentTestimonialHomePageStyles>
+              <h6>{testimonial.company}</h6>
+              <h4>"{testimonial.content}"</h4>
+              <p>{testimonial.author}</p>
+              <LinkTestimonialHomePageStyles>
+                <a href="/">Découvrir nos prestations</a>
+                <button href="/"><AiOutlineArrowRight /></button>
+              </LinkTestimonialHomePageStyles>
+            </ContentTestimonialHomePageStyles>
+          </DivTestimonialHomePageStyles>
+        </SectionTestimonialHomePageStyles>
+        <SelectorDivStyles>
+          <SelectorStyles onClick={handleClick} className='active'>
+          </SelectorStyles>
+          <SelectorStyles onClick={handleClick} className={selectorClicked ? 'active' : ''}>
+          </SelectorStyles>
+        </SelectorDivStyles>
+      </div>
+      ))}
+    </>
   );
 }

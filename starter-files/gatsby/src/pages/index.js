@@ -11,13 +11,34 @@ import BlocLogoCustomers from '../components/BlocLogoCustomers';
 import TestimonialHomePage from '../components/TestimonialHomePage';
 
 export default function HomePage({ data }) {
+  const testimonials = data.testimonials.nodes;
   return (
     <>
       <Header />
       <BlocLogoCustomers />
       <LastEvents/>
-      <TestimonialHomePage />
+      <TestimonialHomePage testimonials={testimonials} />
       <ContactForm />
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    testimonials: allSanityTestimonial {
+      nodes {
+        _id
+        author
+        company
+        content
+        imagetestimonial {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
