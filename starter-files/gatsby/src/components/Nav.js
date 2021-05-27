@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import logo from '../assets/images/download.svg'
@@ -15,12 +15,14 @@ const SectionNavStyles = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 0 40px;
+  &.scrolled {
+    box-shadow: rgb(0 0 0 / 4%) 0px 4px 4px;
+  }
 `;
 
 const NavStyles = styled.nav`
   width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +46,14 @@ const NavStyles = styled.nav`
 `;
 
 export default function Nav() {
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    window.onscroll = () => {
+      setOffset(window.pageYOffset)
+    }
+  }, []);
   return (
-    <SectionNavStyles>
+    <SectionNavStyles className={ offset > 0 ? 'scrolled' : ''} >
       <NavStyles>
         <div className='logo'>
           <Link to="/"><img src={logo} alt="" /></Link>

@@ -6,6 +6,8 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const SectionTestimonialHomePageStyles = styled.section`
   padding: 0px 40px;
+  display: flex;
+  justify-content: center;
 `;
 
 const DivTestimonialHomePageStyles = styled.div`
@@ -42,7 +44,7 @@ const ContentTestimonialHomePageStyles = styled.div`
   p {
     font-weight: 600;
     font-size: 1.3em;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
     color: rgb(0, 71, 150);
   }
 `;
