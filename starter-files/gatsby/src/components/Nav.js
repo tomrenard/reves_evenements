@@ -17,7 +17,7 @@ const SectionNavStyles = styled.section`
   width: 100%;
   padding: 0 40px;
   &.scrolled {
-    box-shadow: rgb(0 0 0 / 4%) 0px 4px 4px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 4px 4px;
   }
 `;
 

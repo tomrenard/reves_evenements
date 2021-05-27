@@ -17,6 +17,7 @@ const DivTestimonialHomePageStyles = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
 `;
 
 const ContainerImgTestimonialHomePageStyles = styled.div`
