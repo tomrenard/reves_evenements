@@ -106,7 +106,10 @@ export default function TestimonialHomePage( { testimonials }) {
   function SetTesti1() {
     setTestiFiltered(testimonialsFiltered2);
   }
-  function SetSelec1() {
+  function SetTesti2() {
+    setTestiFiltered(testimonialsFiltered1);
+  }
+  function SetSelec() {
     setSelectorClicked({selector1: !selectorClicked.selector1, selector2: !selectorClicked.selector2});
   }
   return (
@@ -130,9 +133,9 @@ export default function TestimonialHomePage( { testimonials }) {
           </DivTestimonialHomePageStyles>
         </SectionTestimonialHomePageStyles>
         <SelectorDivStyles>
-          <SelectorStyles onClick={() => { SetTesti1(); SetSelec1();}} className={selectorClicked.selector1 ? 'active' : ''}>
+          <SelectorStyles onClick={() => { SetTesti2(); SetSelec(); }} className={selectorClicked.selector1 ? 'active' : ''}>
           </SelectorStyles>
-          <SelectorStyles onClick={() => setSelectorClicked({selector1: false, selector2: true}) && setTestiFiltered(testimonialsFiltered2)} className={selectorClicked.selector2 ? 'active' : ''}>
+          <SelectorStyles onClick={() => { SetTesti1(); SetSelec(); }} className={selectorClicked.selector2 ? 'active' : ''}>
           </SelectorStyles>
         </SelectorDivStyles>
       </div>
