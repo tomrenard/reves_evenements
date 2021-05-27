@@ -10,7 +10,7 @@ const SectionLastEventsStyles = styled.section`
 
 const DivLastEventsStyles = styled.div`
   max-width: 1200px;
-  padding: 40px 0;
+  padding: 20px 0;
   width: 100%;
 `;
 
@@ -20,7 +20,7 @@ const HeadingLastEventStyles = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   h2 {
     font-size: 3em;
   }

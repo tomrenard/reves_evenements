@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -94,14 +94,24 @@ const SelectorStyles = styled.div`
 `;
 
 export default function TestimonialHomePage( { testimonials }) {
-  let selectorClicked = false;
-  const handleClick = () => {
-    selectorClicked = !selectorClicked;
+  const [selectorClicked, setSelectorClicked] = useState(
+    {
+      selector1: true,
+      selector2: false
+    }
+  );
+  const testimonialsFiltered1 = testimonials.filter(testimonial => testimonial.company === 'Cogent Data');
+  const testimonialsFiltered2 = testimonials.filter(testimonial => testimonial.company === 'Cipher Publishing');
+  const [testiFiltered, setTestiFiltered] = useState(testimonialsFiltered1);
+  function SetTesti1() {
+    setTestiFiltered(testimonialsFiltered2);
   }
-  const testimonialsFiltered = testimonials.filter(testimonial => testimonial.company === 'Cogent Data');
+  function SetSelec1() {
+    setSelectorClicked({selector1: !selectorClicked.selector1, selector2: !selectorClicked.selector2});
+  }
   return (
     <>
-      {testimonialsFiltered.map(testimonial => (
+      {testiFiltered.map(testimonial => (
       <div key={testimonial._id}>
         <SectionTestimonialHomePageStyles>
           <DivTestimonialHomePageStyles>
@@ -120,9 +130,9 @@ export default function TestimonialHomePage( { testimonials }) {
           </DivTestimonialHomePageStyles>
         </SectionTestimonialHomePageStyles>
         <SelectorDivStyles>
-          <SelectorStyles onClick={handleClick} className='active'>
+          <SelectorStyles onClick={() => { SetTesti1(); SetSelec1();}} className={selectorClicked.selector1 ? 'active' : ''}>
           </SelectorStyles>
-          <SelectorStyles onClick={handleClick} className={selectorClicked ? 'active' : ''}>
+          <SelectorStyles onClick={() => setSelectorClicked({selector1: false, selector2: true}) && setTestiFiltered(testimonialsFiltered2)} className={selectorClicked.selector2 ? 'active' : ''}>
           </SelectorStyles>
         </SelectorDivStyles>
       </div>
