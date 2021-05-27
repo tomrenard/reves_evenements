@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const SectionTestimonialHomePageStyles = styled.section`
-  display: flex;
-  justify-content: center;
   padding: 0px 40px;
 `;
 
@@ -39,7 +37,7 @@ const ContentTestimonialHomePageStyles = styled.div`
     color: rgb(102, 102, 102);
   }
   h4 {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
   p {
     font-weight: 600;
@@ -71,22 +69,18 @@ const LinkTestimonialHomePageStyles = styled.div`
 const SelectorDivStyles = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
-  top: 100px;
-
+  justify-content: flex-start;
+  margin-top: 32px;
 `;
 
 const SelectorStyles = styled.div`
-  position: relative;
   width: 30px;
   height: 20px;
   cursor: pointer;
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  top: -90px;
   margin-right: 14px;
-  left: -10px;
   background-color: lightgray;
   &.active {
     background-color: blue;
@@ -129,15 +123,13 @@ export default function TestimonialHomePage( { testimonials }) {
                 <a href="/">Découvrir nos prestations</a>
                 <button href="/"><AiOutlineArrowRight /></button>
               </LinkTestimonialHomePageStyles>
+              <SelectorDivStyles>
+                <SelectorStyles onClick={() => { SetTesti2(); SetSelec(); }} className={selectorClicked.selector1 ? 'active' : ''} />
+                <SelectorStyles onClick={() => { SetTesti1(); SetSelec(); }} className={selectorClicked.selector2 ? 'active' : ''} />
+              </SelectorDivStyles>
             </ContentTestimonialHomePageStyles>
           </DivTestimonialHomePageStyles>
         </SectionTestimonialHomePageStyles>
-        <SelectorDivStyles>
-          <SelectorStyles onClick={() => { SetTesti2(); SetSelec(); }} className={selectorClicked.selector1 ? 'active' : ''}>
-          </SelectorStyles>
-          <SelectorStyles onClick={() => { SetTesti1(); SetSelec(); }} className={selectorClicked.selector2 ? 'active' : ''}>
-          </SelectorStyles>
-        </SelectorDivStyles>
       </div>
       ))}
     </>
