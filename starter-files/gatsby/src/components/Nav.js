@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import logo from '../assets/images/download.svg'
+import logo from '../assets/images/logotest.png'
 
 const SectionNavStyles = styled.section`
   position: fixed;
@@ -15,7 +15,6 @@ const SectionNavStyles = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 40px;
   &.scrolled {
     box-shadow: rgb(0 0 0 / 8%) 0px 4px 4px;
   }
@@ -28,7 +27,6 @@ const NavStyles = styled.nav`
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: 0px auto;
   height: 104px;
   .logo img {
     width: auto;

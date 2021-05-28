@@ -53,8 +53,13 @@ const ContentTestimonialHomePageStyles = styled.div`
 const LinkTestimonialHomePageStyles = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
   a {
-    font-size: 0.9em;
+    font-size: 0.91em;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   button {
     font-size: 0.8em;
@@ -62,9 +67,10 @@ const LinkTestimonialHomePageStyles = styled.div`
     height: 24px;
     text-align: center;
     padding: 0 6px;
-    margin: 6px 8px;
+    margin: 8px 8px;
+    transition: margin-left 0.5s;
     &:hover {
-      border-radius: 10px;
+      margin-left: 15px;
     }
   }
 `;

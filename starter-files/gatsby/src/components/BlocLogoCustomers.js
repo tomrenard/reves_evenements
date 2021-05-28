@@ -28,7 +28,7 @@ const BlocCstStyles = styled.div`
 span {
   line-height: 1.25;
   font-weight: 900;
-  color: var(--blue);
+  color: var(--gold);
 }
 `;
 

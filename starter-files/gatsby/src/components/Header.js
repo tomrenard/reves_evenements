@@ -47,7 +47,7 @@ const DivLeftHeader = styled.div`
     font-weight: 150;
   }
   span {
-    color: var(--blue);
+    color: var(--gold);
   }
 `;
 
