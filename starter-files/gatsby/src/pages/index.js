@@ -12,13 +12,13 @@ import TestimonialHomePage from '../components/TestimonialHomePage';
 
 export default function HomePage({ data }) {
   const testimonials = data.testimonials.nodes;
-  const content = data.homepage.nodes[0];
+  const events = data.events.nodes;
   return (
     <>
       <Header />
       <BlocLogoCustomers />
       <LastEvents/>
-      <EventsGammes content={content} />
+      <EventsGammes events={events} />
       <TestimonialHomePage testimonials={testimonials} />
       <ContactForm />
     </>
@@ -42,17 +42,9 @@ export const query = graphql`
         }
       }
     }
-    homepage: allSanityHomePage {
+    events: allSanityEvent {
       nodes {
-        title3
-        typeevent1
-        typeevent2
-        typeevent3
-        typeevent4
-        contentevent1
-        contentevent2
-        contentevent3
-        contentevent4
+        type
       }
     }
   }

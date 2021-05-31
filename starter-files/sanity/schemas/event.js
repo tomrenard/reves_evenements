@@ -9,6 +9,14 @@ export default {
       type: 'string',
     },
     {
+      name: 'iconevent1',
+      title: 'icon event',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'titleevent1',
       title: 'Event title bloc 1',
       type: 'string',
