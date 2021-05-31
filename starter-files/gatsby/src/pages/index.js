@@ -13,7 +13,6 @@ import HowItWorks from '../components/HowItWorks';
 
 
 export default function HomePage({ data }) {
-  console.log(data);
   const testimonials = data.testimonials.nodes;
   const catEvents = data.catEvents.nodes;
   const events = data.events.nodes;

@@ -23,6 +23,7 @@ const HeadingLastEventStyles = styled.div`
   padding-bottom: 30px;
   h2 {
     font-size: 3em;
+    text-align: center;
   }
   h6 {
     font-size: 0.9em;

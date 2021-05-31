@@ -21,6 +21,7 @@ const HowItWorksStyles = styled.div`
 
 const ContainerHowItWorksStyles = styled.div`
   display: flex;
+  padding-right: 10px;
   span {
     margin-right: 8px;
     font-size: 1.3em;
@@ -49,7 +50,7 @@ export default function HowItWorks() {
               <span>1.</span>
               <ContentHowItWorksStyles>
                 <h5>Définissons ensemble vos attentes et vos besoins</h5>
-                <p>Cliquez sur le bouton "Nous Contacter", remplissez les champs du formulaires et obtenez un devis en moins de 48h !</p>
+                <p>Cliquez sur le bouton "Nous Contacter", remplissez les champs du formulaire et obtenez un devis en moins de 48h !</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
             <ContainerHowItWorksStyles>

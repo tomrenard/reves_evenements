@@ -18,7 +18,7 @@ const DivGammesStyles = styled.div`
 
 const DivHeaderGammesStyles = styled.div`
   width: 100%;
-  max-width: 30%;
+  max-width: 35%;
   display: flex;
   flex-direction: column;
   padding-bottom: 36px;

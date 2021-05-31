@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
 
 const SectionFooterStyles = styled.section`
   padding: 0px 40px;
@@ -27,36 +28,50 @@ const DivFooterStyles = styled.footer`
   li {
     font-weight: 100;
     padding: 4px 0;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
 export default function Footer() {
+  const data = useStaticQuery(graphql`query Footer {
+    allSanityEvent {
+      nodes {
+        type
+        _id
+        }
+      }
+    allSanityDestination {
+      nodes {
+        type
+        _id
+      }
+    }
+    }
+  `)
+  const events = data.allSanityEvent.nodes;
+  const destinations = data.allSanityDestination.nodes;
   return (
     <>
       <SectionFooterStyles>
         <DivFooterStyles>
             <ul>
               <h3>Rêves d'Événements</h3>
-              <li>Instagram</li>
-              <li>Facebook</li>
+              <li><Link target="_blank" to="https://www.instagram.com/revesdevoyages_bruz/?hl=fr">Instagram</Link></li>
+              <li><Link target="_blank" to="https://www.facebook.com/revesdevoyages/">Facebook</Link></li>
             </ul>
             <ul>
               <h3>Événements</h3>
-              <li>Séminaires</li>
-              <li>Voyages incentives</li>
-              <li>Teams buildings</li>
-              <li>Soirées d'entreprise</li>
+              {events.map((event, i) => (
+                <li key={`${i}-${event._id}`}><Link to={`/${event.type}`}>{event.type}</Link></li>
+              ))}
             </ul>
             <ul>
               <h3>Destinations</h3>
-              <li>France</li>
-              <li>Europe</li>
-              <li>Asie</li>
-              <li>Amérique du Nord</li>
-              <li>Amérique du Sud</li>
-              <li>Afrique</li>
-              <li>Océanie</li>
-              <li>Moyen-Orient</li>
+              {destinations.map((des, i) => (
+                <li key={`${i}-${des._id}`}><Link to={`/${des.type}`}>{des.type}</Link></li>
+              ))}
             </ul>
             <ul>
               <h3>Plan du site</h3>
