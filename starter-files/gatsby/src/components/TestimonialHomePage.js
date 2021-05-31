@@ -46,7 +46,7 @@ const ContentTestimonialHomePageStyles = styled.div`
     font-weight: 600;
     font-size: 1.3em;
     margin-bottom: 16px;
-    color: rgb(0, 71, 150);
+    color: var(--gold);
   }
 `;
 
@@ -92,7 +92,7 @@ const SelectorStyles = styled.div`
   margin-right: 14px;
   background-color: lightgray;
   &.active {
-    background-color: blue;
+    background-color: var(--gold);
   }
 `;
 

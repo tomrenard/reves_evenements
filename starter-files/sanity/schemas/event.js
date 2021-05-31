@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'contenthomepageevent',
+      title: 'Event content for HomePage',
+      type: 'string',
+    },
+    {
       name: 'titleevent1',
       title: 'Event title bloc 1',
       type: 'string',

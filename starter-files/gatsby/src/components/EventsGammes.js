@@ -27,52 +27,7 @@ const ColumsGammesStyles = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
 
-export default function EventsGammes() {
-  const data = useStaticQuery(graphql`query Gammes {
-    allSanityHomePage {
-      nodes {
-        title3
-        typeevent1
-        typeevent2
-        typeevent3
-        typeevent4
-        contentevent1
-        contentevent2
-        contentevent3
-        contentevent4
-        imagetypeevent1 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        imagetypeevent2 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        imagetypeevent3 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        imagetypeevent4 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`)
-  const content = data.allSanityHomePage.nodes[0];
+export default function EventsGammes({ content }) {
   return (
     <GammesStyles>
       <h2>{content.title3}</h2>

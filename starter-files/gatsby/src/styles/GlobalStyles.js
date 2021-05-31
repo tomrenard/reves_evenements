@@ -49,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
     cursor: pointer;
     &:hover {
-      background-color: var(--blue);
+      background-color: var(--gold);
     }
   }
 
