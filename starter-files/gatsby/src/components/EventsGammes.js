@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { VscArrowRight } from 'react-icons/vsc';
@@ -54,6 +54,7 @@ const LeftContentDivGammesStyles = styled.div`
 `;
 
 const DivEventTypeStyles = styled.div`
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 16px;
@@ -62,6 +63,13 @@ const DivEventTypeStyles = styled.div`
     margin: 0;
     font-weight: 100;
     margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgb(227, 227, 227);
+  }
+  &.active {
+    background-color: var(--gold);
+    color: white;
   }
 `;
 
@@ -118,6 +126,17 @@ const CardGammesStyles = styled.div`
 `;
 
 export default function EventsGammes({ catEvents, events }) {
+  const [activeType, setActiveType] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeFilter, setActiveFilter] = useState("Soirées entreprise");
+  const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
+  function handleClick(i) {
+    setActiveType(true);
+    setActiveIndex(i);
+  }
+  function handleFilter(catEvent) {
+    setActiveFilter(`${catEvent.type}`);
+  }
   return (
     <SectionGammesStyles>
       <DivGammesStyles>
@@ -128,8 +147,8 @@ export default function EventsGammes({ catEvents, events }) {
         <DivContentGammesStyles>
           <LeftColumnGammesStyles>
             <LeftContentDivGammesStyles>
-              {catEvents.map(catEvent => (
-                <DivEventTypeStyles key={catEvent._id}>
+              {catEvents.map((catEvent, i) => (
+                <DivEventTypeStyles onClick={() => { handleClick(i); handleFilter(catEvent);}} className={activeType && activeIndex === i ? `active ${catEvent.type}` : ''} key={catEvent._id}>
                   <VscArrowRight /><h4>{catEvent.type}</h4>
                 </DivEventTypeStyles>
               ))}
@@ -137,8 +156,8 @@ export default function EventsGammes({ catEvents, events }) {
           </LeftColumnGammesStyles>
           <RightColumnGammesStyles>
             <RightGridGammesStyles>
-              {events.map(event => (
-                <CardGammesStyles>
+              {EventsFiltered.map(event => (
+                <CardGammesStyles key={event._id} className={event.typeevents.type}>
                   <div>
                     <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
                   </div>
