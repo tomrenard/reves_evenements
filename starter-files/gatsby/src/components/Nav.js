@@ -31,7 +31,9 @@ const NavStyles = styled.nav`
   .logo img {
     width: auto;
     height: 40px;
-    padding: 0 40px;
+    @media (max-width: 1300px) {
+      padding: 0 40px;
+    }
   }
   ul {
     display: flex;

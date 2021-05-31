@@ -9,6 +9,8 @@ import Header from '../components/Header';
 import EventsGammes from '../components/EventsGammes';
 import BlocLogoCustomers from '../components/BlocLogoCustomers';
 import TestimonialHomePage from '../components/TestimonialHomePage';
+import HowItWorks from '../components/HowItWorks';
+
 
 export default function HomePage({ data }) {
   console.log(data);
@@ -20,6 +22,7 @@ export default function HomePage({ data }) {
       <Header />
       <BlocLogoCustomers />
       <LastEvents/>
+      <HowItWorks />
       <EventsGammes catEvents={catEvents} events={events} />
       <TestimonialHomePage testimonials={testimonials} />
       <ContactForm />
