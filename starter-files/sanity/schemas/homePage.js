@@ -1,21 +1,21 @@
 export default {
   name: 'homePage',
-  title: 'Home Page',
+  title: 'Page Accueil',
   type: 'document',
   fields: [
     {
       name: 'title1',
-      title: 'Title 1',
+      title: 'Titre du header',
       type: 'string',
     },
     {
       name: 'text1',
-      title: 'Paragraph 1',
+      title: 'Paragraphe du header',
       type: 'string',
     },
     {
       name: 'image1',
-      title: 'Image 1',
+      title: 'Image du header',
       type: 'image',
       options: {
         hotspot: true,
@@ -71,17 +71,17 @@ export default {
     },
     {
       name: 'title2',
-      title: 'Title 2',
+      title: 'Titre du module 2',
       type: 'string',
     },
     {
       name: 'event1',
-      title: 'Title last event 1',
+      title: 'Titre événement 1',
       type: 'string',
     },
     {
       name: 'imagelastevent1',
-      title: 'Image last event 1',
+      title: 'Image événement 1',
       type: 'image',
       options: {
         hotspot: true,
@@ -89,12 +89,12 @@ export default {
     },
     {
       name: 'event2',
-      title: 'Title last event 2',
+      title: 'Titre événement 2',
       type: 'string',
     },
     {
       name: 'imagelastevent2',
-      title: 'Image last event 2',
+      title: 'Image événement 2',
       type: 'image',
       options: {
         hotspot: true,
@@ -102,12 +102,12 @@ export default {
     },
     {
       name: 'event3',
-      title: 'Title last event 3',
+      title: 'Titre événement 3',
       type: 'string',
     },
     {
       name: 'imagelastevent3',
-      title: 'Image last event 3',
+      title: 'Image événement 3',
       type: 'image',
       options: {
         hotspot: true,

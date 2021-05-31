@@ -1,26 +1,26 @@
 export default {
   name: 'testimonial',
-  title: 'Testimonials',
+  title: 'Témoignages clients',
   type: 'document',
   fields: [
     {
       name: 'company',
-      title: 'Name of the company',
+      title: 'Nom entreprise',
       type: 'string',
     },
     {
       name: 'author',
-      title: 'author name',
+      title: 'Nom auteur',
       type: 'string',
     },
     {
       name: 'content',
-      title: 'Content testimonial',
+      title: 'Contenu témoignage',
       type: 'string',
     },
     {
       name: 'imagetestimonial',
-      title: 'Image Testimonial',
+      title: 'Image témoignage',
       type: 'image',
       options: {
         hotspot: true,

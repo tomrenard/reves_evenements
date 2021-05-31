@@ -1,16 +1,11 @@
 export default {
   name: 'event',
-  title: 'Events',
+  title: 'Catégories Événements',
   type: 'document',
   fields: [
     {
       name: 'type',
       title: 'Event type',
-      type: 'string',
-    },
-    {
-      name: 'contenthomepageevent',
-      title: 'Event content for HomePage',
       type: 'string',
     },
     {

@@ -1,6 +1,6 @@
 export default {
   name: 'aboutUs',
-  title: 'About Us Page',
+  title: 'Page À Propos',
   type: 'document',
   fields: [
     {
