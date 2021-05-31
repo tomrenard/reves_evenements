@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { VscArrowRight } from 'react-icons/vsc';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'gatsby';
 
 const SectionGammesStyles = styled.section`
@@ -110,7 +111,9 @@ const CardGammesStyles = styled.div`
     padding: 12px;
     font-size: 0.95em;
     font-weight: 100;
-    align-self: end;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -141,7 +144,7 @@ export default function EventsGammes({ catEvents, events }) {
                   </div>
                   <h5>{event.type}</h5>
                   <p>{event.contentevent}</p>
-                  <Link className='linkevent' to={`/${event.type}`}>En savoir plus</Link>
+                  <Link className='linkevent' to={`/${event.type}`}>En savoir plus <span>&#8594;</span></Link>
                 </CardGammesStyles>
               ))}
             </RightGridGammesStyles>
