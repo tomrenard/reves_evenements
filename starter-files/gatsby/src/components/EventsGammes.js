@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { VscArrowRight } from 'react-icons/vsc';
+import { Link } from 'gatsby';
 
 const SectionGammesStyles = styled.section`
   display: flex;
@@ -97,7 +98,16 @@ export default function EventsGammes({ catEvents, events }) {
             </LeftContentDivGammesStyles>
             <RightColumnGammesStyles>
               <RightGridGammesStyles>
-                {events.map(event => (<p>{event.type}</p>))}
+                {events.map(event => (
+                  <div>
+                    <div>
+                      <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
+                    </div>
+                    <h4>{event.type}</h4>
+                    <p>{event.contentevent}</p>
+                    <Link to={`/${event.type}`}>En savoir plus</Link>
+                  </div>
+                ))}
               </RightGridGammesStyles>
             </RightColumnGammesStyles>
           </LeftColumnGammesStyles>
