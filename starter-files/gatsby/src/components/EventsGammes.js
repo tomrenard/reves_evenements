@@ -41,9 +41,9 @@ const DivContentGammesStyles = styled.div`
 const LeftColumnGammesStyles = styled.div`
   width: 100%;
   display: flex;
-  flex: 1 1 0%;
-  max-width: 365px;
-  min-width: 241px;
+  max-width: 280px;
+  min-width: 240px;
+  margin-right: 120px;
 `;
 
 const LeftContentDivGammesStyles = styled.div`
@@ -68,8 +68,6 @@ const RightColumnGammesStyles = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  flex: 2 1 0%;
 `;
 
 const RightGridGammesStyles = styled.div`
@@ -77,6 +75,43 @@ const RightGridGammesStyles = styled.div`
   gap: 16px;
   display: grid;
   width: 100%;
+`;
+
+const CardGammesStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  border-radius: 20px;
+  border: 1px solid rgb(227, 227, 227);
+  div {
+    border-radius: 20px;
+    height: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+  Img {
+    min-width: 390px;
+    max-height: 200px;
+  }
+  h5 {
+    font-size: 1.2em;
+    padding: 12px;
+    margin: 0;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 100;
+    padding: 12px;
+    font-size: 0.95em;
+    margin: 0;
+  }
+  .linkevent {
+    padding: 12px;
+    font-size: 0.95em;
+    font-weight: 100;
+    align-self: end;
+  }
 `;
 
 export default function EventsGammes({ catEvents, events }) {
@@ -96,21 +131,21 @@ export default function EventsGammes({ catEvents, events }) {
                 </DivEventTypeStyles>
               ))}
             </LeftContentDivGammesStyles>
-            <RightColumnGammesStyles>
-              <RightGridGammesStyles>
-                {events.map(event => (
-                  <div>
-                    <div>
-                      <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
-                    </div>
-                    <h4>{event.type}</h4>
-                    <p>{event.contentevent}</p>
-                    <Link to={`/${event.type}`}>En savoir plus</Link>
-                  </div>
-                ))}
-              </RightGridGammesStyles>
-            </RightColumnGammesStyles>
           </LeftColumnGammesStyles>
+          <RightColumnGammesStyles>
+            <RightGridGammesStyles>
+              {events.map(event => (
+                <CardGammesStyles>
+                  <div>
+                    <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
+                  </div>
+                  <h5>{event.type}</h5>
+                  <p>{event.contentevent}</p>
+                  <Link className='linkevent' to={`/${event.type}`}>En savoir plus</Link>
+                </CardGammesStyles>
+              ))}
+            </RightGridGammesStyles>
+          </RightColumnGammesStyles>
         </DivContentGammesStyles>
       </DivGammesStyles>
     </SectionGammesStyles>
