@@ -11,14 +11,16 @@ import BlocLogoCustomers from '../components/BlocLogoCustomers';
 import TestimonialHomePage from '../components/TestimonialHomePage';
 
 export default function HomePage({ data }) {
+  console.log(data);
   const testimonials = data.testimonials.nodes;
+  const catEvents = data.catEvents.nodes;
   const events = data.events.nodes;
   return (
     <>
       <Header />
       <BlocLogoCustomers />
       <LastEvents/>
-      <EventsGammes events={events} />
+      <EventsGammes catEvents={catEvents} events={events} />
       <TestimonialHomePage testimonials={testimonials} />
       <ContactForm />
     </>
@@ -42,9 +44,34 @@ export const query = graphql`
         }
       }
     }
-    events: allSanityEvent {
+    catEvents: allSanityEvent {
       nodes {
         type
+        _id
+        iconevent1 {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+    events: allSanityEventcategory {
+      nodes {
+        typeevents {
+          type
+        }
+        contentevent
+        type
+        _id
+        imageevent {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
       }
     }
   }
