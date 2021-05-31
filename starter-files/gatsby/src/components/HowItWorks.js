@@ -8,7 +8,6 @@ const SectionHowItWorksStyles = styled.section`
 `;
 
 const DivHowItWorksStyles = styled.div`
-  padding-bottom: 112px;
   max-width: 1038px;
   width: 100%;
 `;
@@ -23,8 +22,8 @@ const HowItWorksStyles = styled.div`
 const ContainerHowItWorksStyles = styled.div`
   display: flex;
   span {
-    margin-right: 1em;
-    font-size: 2em;
+    margin-right: 8px;
+    font-size: 1.3em;
     color: var(--gold);
   }
 `;
@@ -32,7 +31,13 @@ const ContainerHowItWorksStyles = styled.div`
 const ContentHowItWorksStyles = styled.div`
   diplay: flex;
   flex-direction: column;
-  padding-top: 20px;
+  h5 {
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  p {
+    font-weight: 100;
+  }
 `;
 
 export default function HowItWorks() {
@@ -43,22 +48,22 @@ export default function HowItWorks() {
             <ContainerHowItWorksStyles>
               <span>1.</span>
               <ContentHowItWorksStyles>
-                <h5>Envoyez-nous un message</h5>
+                <h5>Définissons ensemble vos attentes et vos besoins</h5>
                 <p>Cliquez sur le bouton "Nous Contacter", remplissez les champs du formulaires et obtenez un devis en moins de 48h !</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
             <ContainerHowItWorksStyles>
               <span>2.</span>
               <ContentHowItWorksStyles>
-                <h5>Envoyez-nous un message</h5>
-                <p>Cliquez sur le bouton "Nous Contacter", remplissez les champs du formulaires et obtenez un devis en moins de 48h !</p>
+                <h5>Planifions et organisons votre événement sur-mesure</h5>
+                <p>Sélection, prise de contact, négociation et coordination générale des différents partenaires et fournisseurs de l’événement ainsi que des aspects logistiques de l’évènement.</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
             <ContainerHowItWorksStyles>
               <span>3.</span>
               <ContentHowItWorksStyles>
-                <h5>Envoyez-nous un message</h5>
-                <p>Cliquez sur le bouton "Nous Contacter", remplissez les champs du formulaires et obtenez un devis en moins de 48h !</p>
+                <h5>Soyez assuré que tout se passe comme prévu !</h5>
+                <p>Encadrement de l’événement le jour J pour vous garantir la fluidité du déroulement de l’événement.</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
         </HowItWorksStyles>
