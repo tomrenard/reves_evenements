@@ -127,8 +127,8 @@ const CardGammesStyles = styled.div`
 
 export default function EventsGammes({ catEvents, events }) {
   const [activeType, setActiveType] = useState(true);
-  const [activeIndex, setActiveIndex] = useState(2);
-  const [activeFilter, setActiveFilter] = useState("Soirées entreprise");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeFilter, setActiveFilter] = useState("Séminaires");
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   function handleClick(i) {
     setActiveType(true);
