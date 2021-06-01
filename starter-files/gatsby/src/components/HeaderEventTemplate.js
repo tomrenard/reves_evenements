@@ -6,26 +6,26 @@ const SectionHeaderEventStyles = styled.section`
   display: flex;
   justify-content: center;
   padding: 0 40px;
+  margin-top: 5em;
 `;
 
 const DivHeaderEventStyles = styled.section`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1200px;
 `;
 
 const DivRightHeader = styled.div`
+  width: 100%;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  width: auto;
-  text-align: left;
-  margin-right: 2.5em;
-  min-width: 450px;
+  max-width: 45%;
+  padding-top: 1.5em;
   h1 {
     font-size: 5em;
     font-weight: 900;
@@ -36,7 +36,7 @@ const DivRightHeader = styled.div`
     align-self: center;
   }
   p {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.8;
     font-weight: 150;
   }
@@ -47,6 +47,7 @@ const DivRightHeader = styled.div`
 
 const DivLeftHeader = styled.div`
   width: 100%;
+  max-width: 45%;
   height: 100%;
 `;
 
