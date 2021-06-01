@@ -43,7 +43,6 @@ const DivRightBloc1Styles = styled.div`
   max-width: 45%;
   width: 100%;
   height: 100%;
-  justify-content: space-evenly;
   h3 {
     margin: 0;
     font-size: 2.3em;

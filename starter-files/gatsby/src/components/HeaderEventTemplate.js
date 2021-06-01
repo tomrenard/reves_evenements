@@ -59,7 +59,7 @@ export default function HeaderEventTemplate({ event }) {
           <Img fluid={event.imageevent1.asset.fluid} alt={event.titleevent1} />
         </DivLeftHeader>
         <DivRightHeader>
-          <h1>{event.titleevent1}</h1>
+          <h1>Organiser un <span>séminaire</span> d'entreprise</h1>
           <p>{event.contentevent1}</p>
           <button className="contact-button">Obtenir un devis</button>
         </DivRightHeader>

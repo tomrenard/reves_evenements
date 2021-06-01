@@ -5,6 +5,7 @@ import Img from 'gatsby-image/withIEPolyfill';
 import HeaderEventTemplate from '../components/HeaderEventTemplate';
 import Bloc1Event from '../components/Bloc1Event';
 import Bloc2Event from '../components/Bloc2Event';
+import Bloc3Event from '../components/Bloc3Event';
 
 
 export default function SingleEventPage({ data }) {
@@ -14,6 +15,7 @@ export default function SingleEventPage({ data }) {
       <HeaderEventTemplate event={event} />
       <Bloc1Event event={event} />
       <Bloc2Event event={event} />
+      <Bloc3Event event={event} />
     </>
   );
 }
