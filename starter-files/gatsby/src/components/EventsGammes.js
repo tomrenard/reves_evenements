@@ -91,6 +91,8 @@ const CardGammesStyles = styled.div`
   flex-direction: column;
   max-width: 390px;
   border-radius: 20px;
+  height: 100%;
+  justify-content: flex-start;
   border: 1px solid rgb(227, 227, 227);
   div {
     border-radius: 20px;

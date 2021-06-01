@@ -3,12 +3,17 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image/withIEPolyfill';
 import HeaderEventTemplate from '../components/HeaderEventTemplate';
+import Bloc1Event from '../components/Bloc1Event';
+import Bloc2Event from '../components/Bloc2Event';
+
 
 export default function SingleEventPage({ data }) {
   const event = data.event;
   return (
     <>
       <HeaderEventTemplate event={event} />
+      <Bloc1Event event={event} />
+      <Bloc2Event event={event} />
     </>
   );
 }
