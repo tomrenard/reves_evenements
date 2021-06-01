@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { VscArrowRight } from 'react-icons/vsc';
@@ -130,7 +130,7 @@ const CardGammesStyles = styled.div`
 export default function EventsGammes({ catEvents, events }) {
   const [activeType, setActiveType] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeFilter, setActiveFilter] = useState("Séminaires");
+  const [activeFilter, setActiveFilter] = useState("Team-buildings");
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   function handleClick(i) {
     setActiveType(true);
