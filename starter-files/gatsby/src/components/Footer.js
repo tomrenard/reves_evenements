@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const SectionFooterStyles = styled.section`
   padding: 0px 40px;
+  margin-top: 8em;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@ const DivFooterStyles = styled.footer`
   border-top: 1px lightgray dotted;
   width: 100%;
   max-width: 1200px;
-  padding: 60px 0;
+  padding: 20px 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
