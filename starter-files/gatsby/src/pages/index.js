@@ -49,6 +49,9 @@ export const query = graphql`
     catEvents: allSanityEvent {
       nodes {
         type
+        slug {
+          current
+        }
         _id
         iconevent1 {
           asset {

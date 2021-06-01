@@ -13,18 +13,19 @@ const Sectiontest = styled.section`
   }
 `;
 
-export default function SingleEventPage({ data }) {
-  const event = data.event;
+export default function SingleDestinationPage({ data }) {
+  const destination = data.destination;
+  console.log(data);
   return (
     <Sectiontest>
-      <p>{event.type}</p>
+      <p>{destination.type}</p>
     </Sectiontest>
   );
 }
 
 export const query = graphql`
   query($slug: String!) {
-    event: sanityEvent(slug: { current: {eq: $slug} }) {
+    destination: sanityDestination(slug: { current: {eq: $slug} }) {
       type
     }
   }

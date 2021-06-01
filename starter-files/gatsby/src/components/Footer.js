@@ -49,6 +49,9 @@ export default function Footer() {
       nodes {
         type
         _id
+        slug {
+          current
+        }
       }
     }
     }
@@ -73,7 +76,7 @@ export default function Footer() {
             <ul>
               <h3>Destinations</h3>
               {destinations.map((des, i) => (
-                <li key={`${i}-${des._id}`}><Link to={`/${des.type}`}>{des.type}</Link></li>
+                <li key={`${i}-${des._id}`}><Link to={`/destination/${des.slug.current}`}>{des.type}</Link></li>
               ))}
             </ul>
             <ul>

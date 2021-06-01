@@ -127,7 +127,7 @@ const CardGammesStyles = styled.div`
 
 export default function EventsGammes({ catEvents, events }) {
   const [activeType, setActiveType] = useState(true);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const [activeFilter, setActiveFilter] = useState("Soirées entreprise");
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   function handleClick(i) {
@@ -163,7 +163,7 @@ export default function EventsGammes({ catEvents, events }) {
                   </div>
                   <h5>{event.type}</h5>
                   <p>{event.contentevent}</p>
-                  <Link className='linkevent' to={`/${event.type}`}>En savoir plus <span>&#8594;</span></Link>
+                  <Link className='linkevent' to={`/evenement/${event.typeevents.type.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "") }`}>En savoir plus <span>&#8594;</span></Link>
                 </CardGammesStyles>
               ))}
             </RightGridGammesStyles>
