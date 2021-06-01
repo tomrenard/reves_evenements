@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'type',
-      title: 'Event type',
+      title: 'Type événement',
       type: 'string',
     },
     {
@@ -19,7 +19,7 @@ export default {
     },
     {
       name: 'iconevent1',
-      title: 'icon event',
+      title: 'Icône événement',
       type: 'image',
       options: {
         hotspot: true,
@@ -27,24 +27,34 @@ export default {
     },
     {
       name: 'titleevent1',
-      title: 'Event title bloc 1',
+      title: 'Titre header',
       type: 'string',
     },
     {
       name: 'contentevent1',
-      title: 'Event content bloc 1',
+      title: 'Contenu paragraphe header',
       type: 'string',
     },
     {
       name: 'imageevent1',
-      title: 'Image event bloc 1',
+      title: 'Image header',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'titleevent2',
+      name: 'titletransi1',
+      title: 'Titre transition bloc 2',
+      type: 'string',
+    },
+    {
+      name: 'titleevent2h6',
+      title: 'Event title h6 bloc 2',
+      type: 'string',
+    },
+    {
+      name: 'titleevent2h2',
       title: 'Event title bloc 2',
       type: 'string',
     },
@@ -60,6 +70,11 @@ export default {
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'titleevent3h6',
+      title: 'Event title h6 bloc 3',
+      type: 'string',
     },
     {
       name: 'titleevent3',
@@ -79,9 +94,14 @@ export default {
         hotspot: true,
       },
     },
-     {
+    {
       name: 'titleevent4',
       title: 'Event title bloc 4',
+      type: 'string',
+    },
+    {
+      name: 'titleevent4h6',
+      title: 'Event title h6 bloc 4',
       type: 'string',
     },
     {
@@ -98,8 +118,59 @@ export default {
       },
     },
     {
+      name: 'titleevent5',
+      title: 'Event title bloc 5',
+      type: 'string',
+    },
+    {
+      name: 'titleevent5h6',
+      title: 'Event title h6 bloc 5',
+      type: 'string',
+    },
+    {
+      name: 'contentevent5',
+      title: 'Event content bloc 5',
+      type: 'string',
+    },
+    {
+      name: 'imageevent5',
+      title: 'Image event bloc 5',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'titleevent6',
+      title: 'Event title bloc 6',
+      type: 'string',
+    },
+    {
+      name: 'titleevent6h6',
+      title: 'Event title h6 bloc 6',
+      type: 'string',
+    },
+    {
+      name: 'contentevent6',
+      title: 'Event content bloc 6',
+      type: 'string',
+    },
+    {
+      name: 'imageevent6',
+      title: 'Image event bloc 6',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: 'testievent1',
       title: 'Testimonial event 1',
+      type: 'string',
+    },
+    {
+      name: 'testieventcompany1',
+      title: 'Testimonial company event 1',
       type: 'string',
     },
     {
