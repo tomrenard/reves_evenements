@@ -6,6 +6,8 @@ import HeaderEventTemplate from '../components/HeaderEventTemplate';
 import Bloc1Event from '../components/Bloc1Event';
 import Bloc2Event from '../components/Bloc2Event';
 import Bloc3Event from '../components/Bloc3Event';
+import Bloc4Event from '../components/Bloc4Event';
+import Bloc5Event from '../components/Bloc5Event';
 
 
 export default function SingleEventPage({ data }) {
@@ -16,6 +18,8 @@ export default function SingleEventPage({ data }) {
       <Bloc1Event event={event} />
       <Bloc2Event event={event} />
       <Bloc3Event event={event} />
+      <Bloc4Event event={event} />
+      <Bloc5Event event={event} />
     </>
   );
 }
