@@ -10,6 +10,7 @@ const SectionEventBloc2Styles = styled.section`
 
 const DivEventBloc2Styles = styled.div`
   margin: 40px auto;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
   display: flex;

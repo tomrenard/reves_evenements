@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image/withIEPolyfill';
 
+const SectionH2 = styled.section`
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+`;
+
 const Div1EventBloc1Styles = styled.div`
   max-width: 1200px;
   width: 100%;
@@ -22,6 +28,7 @@ const SectionEventBloc1Styles = styled.section`
 const DivEventBloc1Styles = styled.div`
   margin: 40px auto;
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -63,9 +70,11 @@ const DivRightBloc1Styles = styled.div`
 export default function Bloc1Event({ event }) {
   return(
     <>
-    <Div1EventBloc1Styles>
-      <h2>{event.titletransi1}</h2>
-    </Div1EventBloc1Styles>
+    <SectionH2>
+      <Div1EventBloc1Styles>
+        <h2>{event.titletransi1}</h2>
+      </Div1EventBloc1Styles>
+    </SectionH2>
     <SectionEventBloc1Styles>
       <DivEventBloc1Styles>
         <DivLeftBloc1Styles>

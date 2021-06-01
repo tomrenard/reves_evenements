@@ -12,6 +12,7 @@ const DivEventBloc5Styles = styled.div`
   margin: 40px auto;
   width: 100%;
   height: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: row;
   align-items: center;

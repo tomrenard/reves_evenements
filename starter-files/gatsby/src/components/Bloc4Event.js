@@ -11,6 +11,7 @@ const SectionEventBloc4Styles = styled.section`
 const DivEventBloc4Styles = styled.div`
   margin: 40px auto;
   width: 100%;
+  max-width: 1200px;
   height: 100%;
   display: flex;
   flex-direction: row;
