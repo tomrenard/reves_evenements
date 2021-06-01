@@ -40,6 +40,9 @@ export default function Footer() {
       nodes {
         type
         _id
+        slug {
+          current
+        }
         }
       }
     allSanityDestination {
@@ -64,7 +67,7 @@ export default function Footer() {
             <ul>
               <h3>Événements</h3>
               {events.map((event, i) => (
-                <li key={`${i}-${event._id}`}><Link to={`/${event.type}`}>{event.type}</Link></li>
+                <li key={`${i}-${event._id}`}><Link to={`/evenement/${event.slug.current}`}>{event.type}</Link></li>
               ))}
             </ul>
             <ul>
