@@ -24,6 +24,7 @@ const NavStyles = styled.nav`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -44,6 +45,25 @@ const NavStyles = styled.nav`
       margin: 0px 20px;
     }
   }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    &:hover .dropdown-content {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .dropdown-content {
+    margin-top: 2em;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    min-width: 450px;
+    z-index: 1000;
+    transition: visibility 0.5s, opacity 0.2s linear;
+  }
 `;
 
 export default function Nav() {
@@ -61,7 +81,12 @@ export default function Nav() {
         </div>
         <ul>
           <li>
-            <Link to="/">Événements</Link>
+            <div className="dropdown">
+              <Link to="/">Événements</Link>
+              <div className="dropdown-content">
+                <p>Séminaires</p>
+              </div>
+            </div>
           </li>
           <li>
             <Link to="/">Destinations</Link>
