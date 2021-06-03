@@ -11,7 +11,6 @@ import Bloc5Event from '../components/Bloc5Event';
 import BlocTestiEvent from '../components/BlocTestiEvent';
 import ContactForm from '../components/ContactForm';
 
-
 export default function SingleEventPage({ data }) {
   const event = data.event;
   return (
@@ -28,7 +27,7 @@ export default function SingleEventPage({ data }) {
   );
 }
 
-export const query = graphql`
+export const query1 = graphql`
   query($slug: String!) {
     event: sanityEvent(slug: { current: {eq: $slug} }) {
       authortestievent1
