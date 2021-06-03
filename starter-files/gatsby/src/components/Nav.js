@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import logo from '../assets/images/logotest.png'
+import logo from '../assets/images/logotest.png';
+import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowUp } from 'react-icons/io';
+
 
 const SectionNavStyles = styled.section`
   position: fixed;
@@ -22,6 +25,8 @@ const SectionNavStyles = styled.section`
 
 const NavStyles = styled.nav`
   width: 100%;
+  height: 100%;
+  align-content: center;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -88,6 +93,8 @@ const NavStyles = styled.nav`
 
 export default function Nav() {
   const [offset, setOffset] = useState(0);
+  const [isShown1, setIsShown1] = useState(false);
+  const [isShown2, setIsShown2] = useState(false);
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset)
@@ -101,9 +108,14 @@ export default function Nav() {
         </div>
         <ul>
           <li>
-            <div className="dropdown">
+            <div onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)} className="dropdown">
               <div className="drop">
-                <Link to="/">Événements</Link>
+                <Link to="/">Événements
+                {isShown1 ?
+                <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
+                : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
+                }
+                </Link>
               </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">
@@ -113,9 +125,14 @@ export default function Nav() {
             </div>
           </li>
           <li>
-            <div className="dropdown">
+            <div onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)} className="dropdown">
               <div className="drop">
-                <Link to="/">Destinations</Link>
+                <Link to="/">Destinations
+                {isShown2 ?
+                <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
+                : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
+                }
+                </Link>
               </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">

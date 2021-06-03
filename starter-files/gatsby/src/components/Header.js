@@ -2,6 +2,8 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Typewriter from 'typewriter-effect';
+
 
 const SectionHeaderStyles = styled.section`
   background-position: center bottom;
@@ -78,7 +80,13 @@ export default function Header() {
     <SectionHeaderStyles>
       <DivHeaderStyles>
         <DivLeftHeader>
-          <h1>{content.title1} <span>sur-mesure</span></h1>
+          <h1>{content.title1} <span><Typewriter
+          options={{
+          strings: ['sur-mesure'],
+          autoStart: true,
+          loop: true,
+          }}/>
+          </span></h1>
           <p>{content.text1}</p>
           <button className="contact-button">Obtenir un devis</button>
         </DivLeftHeader>
