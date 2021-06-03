@@ -67,12 +67,13 @@ const NavStyles = styled.nav`
     width: auto;
     visibility: hidden;
     opacity: 0;
+    transition: visibility 0.5s, opacity 0.2s linear;
   }
   .dropdown-content {
     border-radius: 16px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 450px;
-    transition: visibility 0.5s, opacity 0.2s linear;
+
     background-color: white;
     max-width: 860px;
     width: 100%;
