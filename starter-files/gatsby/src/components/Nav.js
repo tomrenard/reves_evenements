@@ -43,6 +43,9 @@ const NavStyles = styled.nav`
     width: auto;
     li {
       margin: 0px 20px;
+      &:hover a {
+        color: var(--gold);
+      }
     }
   }
   .dropdown {
@@ -53,16 +56,29 @@ const NavStyles = styled.nav`
       opacity: 1;
     }
   }
+  .container-dropdown {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
   .dropdown-content {
-    margin-top: 2em;
     visibility: hidden;
     opacity: 0;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    position: absolute;
     min-width: 450px;
-    z-index: 1000;
     transition: visibility 0.5s, opacity 0.2s linear;
+    background-color: white;
+    max-width: 860px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 48px 24px;
   }
 `;
 
@@ -83,21 +99,28 @@ export default function Nav() {
           <li>
             <div className="dropdown">
               <Link to="/">Événements</Link>
-              <div className="dropdown-content">
-                <p>Séminaires</p>
+              <div className="container-dropdown">
+                <div className="dropdown-content">
+                 <p>Dropdrown events</p>
+                </div>
               </div>
             </div>
           </li>
           <li>
-            <Link to="/">Destinations</Link>
+            <div className="dropdown">
+              <Link to="/">Destinations</Link>
+              <div className="container-dropdown">
+                <div className="dropdown-content">
+                  <p>Dropdrown destinations</p>
+                </div>
+              </div>
+            </div>
           </li>
           <li>
             <Link to="/about">À propos</Link>
           </li>
           <li>
-            <button>
-              <Link to="/contact">Nous contacter</Link>
-            </button>
+            <button>Nous contacter</button>
           </li>
         </ul>
       </NavStyles>
