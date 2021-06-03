@@ -51,10 +51,10 @@ const NavStyles = styled.nav`
   .dropdown {
     float: left;
     overflow: hidden;
-    &:hover .dropdown-content {
-      visibility: visible;
-      opacity: 1;
-    }
+   }
+  .drop:hover + .container-dropdown {
+    visibility: visible;
+    opacity: 1;
   }
   .container-dropdown {
     position: fixed;
@@ -65,10 +65,10 @@ const NavStyles = styled.nav`
     display: flex;
     justify-content: center;
     width: auto;
-  }
-  .dropdown-content {
     visibility: hidden;
     opacity: 0;
+  }
+  .dropdown-content {
     border-radius: 16px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 450px;
@@ -98,7 +98,9 @@ export default function Nav() {
         <ul>
           <li>
             <div className="dropdown">
-              <Link to="/">Événements</Link>
+              <div className="drop">
+                <Link to="/">Événements</Link>
+              </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">
                  <p>Dropdrown events</p>
@@ -108,7 +110,9 @@ export default function Nav() {
           </li>
           <li>
             <div className="dropdown">
-              <Link to="/">Destinations</Link>
+              <div className="drop">
+                <Link to="/">Destinations</Link>
+              </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">
                   <p>Dropdrown destinations</p>
