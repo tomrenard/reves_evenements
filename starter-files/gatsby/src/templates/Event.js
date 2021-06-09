@@ -13,8 +13,9 @@ import ContactForm from '../components/ContactForm';
 import EventsGammes from '../components/EventsGammes';
 
 export default function SingleEventPage({ data }) {
-  console.log(data);
-  const [event, catEvents, events] = data;
+  const event = data.event;
+  const catEvents = data.catEvents.nodes;
+  const events = data.events.nodes;
   return (
     <>
       <HeaderEventTemplate event={event} />
@@ -24,7 +25,7 @@ export default function SingleEventPage({ data }) {
       <Bloc4Event event={event} />
       <Bloc5Event event={event} />
       <BlocTestiEvent event={event} />
-      <EventsGammes catEvents={catEvents} events={events} />
+      <EventsGammes event={event} catEvents={catEvents} events={events} />
       <ContactForm />
     </>
   );

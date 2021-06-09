@@ -127,11 +127,15 @@ const CardGammesStyles = styled.div`
   }
 `;
 
-export default function EventsGammes({ catEvents, events }) {
+export default function EventsGammes({ catEvents, events, event }) {
   const [activeType, setActiveType] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeFilter, setActiveFilter] = useState("Séminaires");
+  let defaultFilter = event?.type || "Séminaires";
+  const [activeFilter, setActiveFilter] = useState(defaultFilter);
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
+  let catEventsFiltered = catEvents;
+  event ? catEventsFiltered = catEvents.filter(catEvent => catEvent.type === `${event.type}`) : catEvents;
+  console.log(catEventsFiltered);
   function handleClick(i) {
     setActiveType(true);
     setActiveIndex(i);
@@ -144,12 +148,15 @@ export default function EventsGammes({ catEvents, events }) {
       <DivGammesStyles>
         <DivHeaderGammesStyles>
           <h6>Gamme d'événements</h6>
+          { event ?
+            <h2>Explorez tous nos {event.type.toLowerCase()}</h2> :
           <h2>Explorez tous nos types d'événements</h2>
+          }
         </DivHeaderGammesStyles>
         <DivContentGammesStyles>
           <LeftColumnGammesStyles>
             <LeftContentDivGammesStyles>
-              {catEvents.map((catEvent, i) => (
+              {catEventsFiltered.map((catEvent, i) => (
                 <DivEventTypeStyles onClick={() => { handleClick(i); handleFilter(catEvent);}} className={activeType && activeIndex === i ? `active ${catEvent.type}` : ''} key={catEvent._id}>
                   <VscArrowRight /><h4>{catEvent.type}</h4>
                 </DivEventTypeStyles>
@@ -165,7 +172,10 @@ export default function EventsGammes({ catEvents, events }) {
                   </div>
                   <h5>{event.type}</h5>
                   <p>{event.contentevent}</p>
+                  { event ?
+                  <Link className='linkevent' to="/">Demander un devis <span>&#8594;</span></Link> :
                   <Link className='linkevent' to={`/evenement/${event.typeevents.type.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "") }`}>En savoir plus <span>&#8594;</span></Link>
+                  }
                 </CardGammesStyles>
               ))}
             </RightGridGammesStyles>
