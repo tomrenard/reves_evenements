@@ -27,6 +27,9 @@ const ContainerHowItWorksStyles = styled.div`
     font-size: 1.3em;
     color: var(--gold);
   }
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ContentHowItWorksStyles = styled.div`

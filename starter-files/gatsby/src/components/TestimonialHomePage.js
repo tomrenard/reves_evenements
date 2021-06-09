@@ -18,6 +18,9 @@ const DivTestimonialHomePageStyles = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ContainerImgTestimonialHomePageStyles = styled.div`
@@ -27,6 +30,9 @@ const ContainerImgTestimonialHomePageStyles = styled.div`
   border-radius: 40px;
   max-width: 390px;
   max-height: 390px;
+  @media (max-width: 900px) {
+    margin: 1em auto;
+  }
 `;
 
 const ContentTestimonialHomePageStyles = styled.div`

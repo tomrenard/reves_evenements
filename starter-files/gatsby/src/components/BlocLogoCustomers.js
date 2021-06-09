@@ -38,9 +38,15 @@ const LogoListStyles = styled.div`
   justify-content: space-between;
   opacity: 0.4;
   width: 100%;
+  @media (max-width: 900px) {
+    flex-wrap: column wrap;
+  }
   .logocst {
     width: 100px;
     height: auto;
+    @media (max-width: 900px) {
+      margin: 8px;
+    }
   }
   Img {
     width: 100%;

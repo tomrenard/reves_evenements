@@ -37,6 +37,9 @@ const DivHeaderGammesStyles = styled.div`
 const DivContentGammesStyles = styled.div`
   width: 100%;
   display: flex;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const LeftColumnGammesStyles = styled.div`
@@ -45,6 +48,9 @@ const LeftColumnGammesStyles = styled.div`
   max-width: 280px;
   min-width: 240px;
   margin-right: 120px;
+  @media (max-width: 900px) {
+    margin-bottom: 2em;
+  }
 `;
 
 const LeftContentDivGammesStyles = styled.div`

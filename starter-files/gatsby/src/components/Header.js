@@ -24,6 +24,9 @@ const DivHeaderStyles = styled.div`
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1200px;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const DivLeftHeader = styled.div`
@@ -39,6 +42,9 @@ const DivLeftHeader = styled.div`
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.01em;
+    @media (max-width: 700px) {
+    font-size: 3.5em;
+    }
   }
   button {
     align-self: center;
@@ -56,6 +62,9 @@ const DivLeftHeader = styled.div`
 const DivRightHeader = styled.div`
   width: 100%;
   height: 100%;
+  @media (max-width: 900px) {
+    margin-top: 2em;
+  }
 `;
 
 export default function Header() {
