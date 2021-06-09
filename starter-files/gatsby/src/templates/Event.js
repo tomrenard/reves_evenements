@@ -10,9 +10,11 @@ import Bloc4Event from '../components/Bloc4Event';
 import Bloc5Event from '../components/Bloc5Event';
 import BlocTestiEvent from '../components/BlocTestiEvent';
 import ContactForm from '../components/ContactForm';
+import EventsGammes from '../components/EventsGammes';
 
 export default function SingleEventPage({ data }) {
-  const event = data.event;
+  console.log(data);
+  const [event, catEvents, events] = data;
   return (
     <>
       <HeaderEventTemplate event={event} />
@@ -22,6 +24,7 @@ export default function SingleEventPage({ data }) {
       <Bloc4Event event={event} />
       <Bloc5Event event={event} />
       <BlocTestiEvent event={event} />
+      <EventsGammes catEvents={catEvents} events={events} />
       <ContactForm />
     </>
   );
@@ -100,6 +103,39 @@ export const query1 = graphql`
               ...GatsbySanityImageFluid
             }
           }
+      }
+    }
+    catEvents: allSanityEvent {
+      nodes {
+        type
+        slug {
+          current
+        }
+        _id
+        iconevent1 {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+    events: allSanityEventcategory {
+      nodes {
+        typeevents {
+          type
+        }
+        contentevent
+        type
+        _id
+        imageevent {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
       }
     }
   }
