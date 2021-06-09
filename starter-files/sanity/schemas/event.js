@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'contentmenuevent',
+      title: 'Contenu menu',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

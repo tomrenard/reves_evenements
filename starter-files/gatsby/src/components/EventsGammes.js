@@ -141,7 +141,6 @@ export default function EventsGammes({ catEvents, events, event }) {
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   let catEventsFiltered = catEvents;
   event ? catEventsFiltered = catEvents.filter(catEvent => catEvent.type === `${event.type}`) : catEvents;
-  console.log(catEventsFiltered);
   function handleClick(i) {
     setActiveType(true);
     setActiveIndex(i);

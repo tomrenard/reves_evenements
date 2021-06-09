@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logo from '../assets/images/logotest.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoIosArrowUp } from 'react-icons/io';
+import { useStaticQuery, graphql } from 'gatsby';
 
 
 const SectionNavStyles = styled.section`
@@ -48,10 +49,10 @@ const NavStyles = styled.nav`
     width: auto;
     li {
       margin: 0px 20px;
-      &:hover a {
-        color: var(--gold);
-      }
     }
+  }
+  .menu-to-hover:hover {
+    color: var(--gold);
   }
   .dropdown {
     float: left;
@@ -83,11 +84,28 @@ const NavStyles = styled.nav`
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     min-width: 450px;
     background-color: white;
-    max-width: 860px;
+    max-width: 900px;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 48px 24px;
+  }
+`;
+
+const ContentMenuDropdownStyles = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ColumnContentDropStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  p {
+    color: gray;
+    font-weight: 100;
+    font-size: 0.9em;
   }
 `;
 
@@ -100,6 +118,29 @@ export default function Nav() {
       setOffset(window.pageYOffset)
     }
   }, []);
+  const data = useStaticQuery(graphql`query NavMenuDropdown {
+    events: allSanityEvent {
+      nodes {
+        type
+        contentmenuevent
+        slug {
+          current
+        }
+      }
+    }
+    destinations: allSanityDestination {
+      nodes {
+        type
+        contentmenudestination
+        slug {
+          current
+        }
+      }
+    }
+  }
+`)
+  const events = data.events.nodes;
+  const destinations = data.destinations.nodes;
   return (
     <SectionNavStyles className={ offset > 0 ? 'scrolled' : ''} >
       <NavStyles>
@@ -110,7 +151,7 @@ export default function Nav() {
           <li>
             <div onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)} className="dropdown">
               <div className="drop">
-                <Link to="/">Événements
+                <Link className="menu-to-hover" to="/">Événements
                 {isShown1 ?
                 <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
                 : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
@@ -119,7 +160,14 @@ export default function Nav() {
               </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">
-                 <p>Dropdrown events</p>
+                 {events.map((event, index) => (
+                  <ContentMenuDropdownStyles key={index}>
+                    <ColumnContentDropStyles>
+                      <Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link>
+                      <p>{event.contentmenuevent}</p>
+                    </ColumnContentDropStyles>
+                  </ContentMenuDropdownStyles>
+                 ))}
                 </div>
               </div>
             </div>
@@ -127,7 +175,7 @@ export default function Nav() {
           <li>
             <div onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)} className="dropdown">
               <div className="drop">
-                <Link to="/">Destinations
+                <Link className="menu-to-hover" to="/">Destinations
                 {isShown2 ?
                 <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
                 : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
@@ -136,13 +184,20 @@ export default function Nav() {
               </div>
               <div className="container-dropdown">
                 <div className="dropdown-content">
-                  <p>Dropdrown destinations</p>
+                  {destinations.map((des, index) => (
+                  <ContentMenuDropdownStyles key={index}>
+                    <ColumnContentDropStyles>
+                      <Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link>
+                      <p>{des.contentmenudestination}</p>
+                    </ColumnContentDropStyles>
+                  </ContentMenuDropdownStyles>
+                 ))}
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <Link to="/about">À propos</Link>
+            <Link className="menu-to-hover" to="/about">À propos</Link>
           </li>
           <li>
             <button>Nous contacter</button>
