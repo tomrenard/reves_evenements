@@ -67,8 +67,10 @@ const DivRightBloc1Styles = styled.div`
   }
 `;
 
-export default function Bloc1Event({ event }) {
+export default function Bloc1Event({ event, destination }) {
   return(
+    <>
+    { event ?
     <>
     <SectionH2>
       <Div1EventBloc1Styles>
@@ -87,6 +89,28 @@ export default function Bloc1Event({ event }) {
         </DivRightBloc1Styles>
       </DivEventBloc1Styles>
     </SectionEventBloc1Styles>
+    </>
+    :
+    <>
+    <SectionH2>
+      <Div1EventBloc1Styles>
+        <h2>{destination.titletransidestination1}</h2>
+      </Div1EventBloc1Styles>
+    </SectionH2>
+    <SectionEventBloc1Styles>
+      <DivEventBloc1Styles>
+        <DivLeftBloc1Styles>
+          <Img fluid={destination.imagedestination2.asset.fluid} alt={destination.titledestination2h2} />
+        </DivLeftBloc1Styles>
+        <DivRightBloc1Styles>
+          <h6>{destination.titledestination2h6}</h6>
+          <h3>{destination.titledestination2h2}</h3>
+          <p>{destination.contentdestination2}</p>
+        </DivRightBloc1Styles>
+      </DivEventBloc1Styles>
+    </SectionEventBloc1Styles>
+    </>
+    }
     </>
   );
 }

@@ -27,7 +27,7 @@ const DivRightHeader = styled.div`
   max-width: 45%;
   padding-top: 1.5em;
   h1 {
-    font-size: 5em;
+    font-size: 4.5em;
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.01em;
@@ -51,9 +51,10 @@ const DivLeftHeader = styled.div`
   height: 100%;
 `;
 
-export default function HeaderEventTemplate({ event }) {
+export default function HeaderEventTemplate({ event, destination }) {
   return(
     <SectionHeaderEventStyles>
+    { event ?
       <DivHeaderEventStyles>
         <DivLeftHeader>
           <Img fluid={event.imageevent1.asset.fluid} alt={event.titleevent1} />
@@ -64,7 +65,18 @@ export default function HeaderEventTemplate({ event }) {
           <button className="contact-button">Obtenir un devis</button>
         </DivRightHeader>
       </DivHeaderEventStyles>
+      :
+      <DivHeaderEventStyles>
+        <DivLeftHeader>
+          <Img fluid={destination.imagedestination1.asset.fluid} alt={destination.titledestination1} />
+        </DivLeftHeader>
+        <DivRightHeader>
+          <h1>Organiser un <span>voyage incentive</span> en France</h1>
+          <p>{destination.contentdestination1}</p>
+          <button className="contact-button">Obtenir un devis</button>
+        </DivRightHeader>
+      </DivHeaderEventStyles>
+    }
     </SectionHeaderEventStyles>
-
   );
 }

@@ -51,9 +51,10 @@ const DivLeftBloc2Styles = styled.div`
   }
 `;
 
-export default function Bloc2Event({ event }) {
+export default function Bloc2Event({ event, destination }) {
   return(
     <SectionEventBloc2Styles>
+    { event ?
       <DivEventBloc2Styles>
         <DivLeftBloc2Styles>
           <h6>{event.titleevent3h6}</h6>
@@ -64,6 +65,18 @@ export default function Bloc2Event({ event }) {
           <Img fluid={event.imageevent3.asset.fluid} alt={event.titleevent3} />
         </DivRightBloc2Styles>
       </DivEventBloc2Styles>
+    :
+      <DivEventBloc2Styles>
+        <DivLeftBloc2Styles>
+          <h6>{destination.titledestination3h6}</h6>
+          <h3>{destination.titledestination3}</h3>
+          <p>{destination.contentdestination3}</p>
+        </DivLeftBloc2Styles>
+        <DivRightBloc2Styles>
+          <Img fluid={destination.imagedestination3.asset.fluid} alt={destination.titledestination3} />
+        </DivRightBloc2Styles>
+      </DivEventBloc2Styles>
+    }
     </SectionEventBloc2Styles>
   );
 }
