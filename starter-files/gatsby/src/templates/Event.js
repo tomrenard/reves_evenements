@@ -26,7 +26,6 @@ export default function SingleEventPage({ data }) {
       <Bloc5Event event={event} />
       <BlocTestiEvent event={event} />
       <EventsGammes event={event} catEvents={catEvents} events={events} />
-      <ContactForm />
     </>
   );
 }

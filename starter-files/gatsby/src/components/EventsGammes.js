@@ -76,7 +76,7 @@ const DivEventTypeStyles = styled.div`
 const RightColumnGammesStyles = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const RightGridGammesStyles = styled.div`
@@ -98,7 +98,7 @@ const CardGammesStyles = styled.div`
     border-radius: 20px;
     height: 100%;
     min-height: 200px;
-    max-height: 200px;
+    max-height: 240px;
     overflow: hidden;
   }
   Img {
@@ -107,7 +107,7 @@ const CardGammesStyles = styled.div`
   }
   h5 {
     font-size: 1.2em;
-    padding: 12px;
+    padding-left: 12px;
     margin: 0;
     font-weight: 400;
   }
@@ -125,6 +125,12 @@ const CardGammesStyles = styled.div`
       text-decoration: underline;
     }
   }
+`;
+
+const ContentCardGammesStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export default function EventsGammes({ catEvents, events, event }) {
@@ -170,12 +176,14 @@ export default function EventsGammes({ catEvents, events, event }) {
                   <div>
                     <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
                   </div>
+                  <ContentCardGammesStyles>
                   <h5>{event.type}</h5>
                   <p>{event.contentevent}</p>
                   { event ?
                   <Link className='linkevent' to="/">Demander un devis <span>&#8594;</span></Link> :
                   <Link className='linkevent' to={`/evenement/${event.typeevents.type.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "") }`}>En savoir plus <span>&#8594;</span></Link>
                   }
+                  </ContentCardGammesStyles>
                 </CardGammesStyles>
               ))}
             </RightGridGammesStyles>
