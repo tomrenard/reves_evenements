@@ -82,7 +82,7 @@ export default function Header() {
         <DivLeftHeader>
           <h1>{content.title1} <span><Typewriter
           options={{
-          strings: ['sur-mesure'],
+          strings: ['sur-mesure', 'personnalisés', 'de A à Z'],
           autoStart: true,
           loop: true,
           }}/>
