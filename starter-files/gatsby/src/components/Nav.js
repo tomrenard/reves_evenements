@@ -88,7 +88,7 @@ const NavStyles = styled.nav`
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 48px 24px;
+    padding: 24px;
   }
 `;
 
