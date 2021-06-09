@@ -51,9 +51,10 @@ const DivLeftBloc4Styles = styled.div`
   }
 `;
 
-export default function Bloc4Event({ event }) {
+export default function Bloc4Event({ event, destination }) {
   return(
     <SectionEventBloc4Styles>
+    { event ?
       <DivEventBloc4Styles>
         <DivLeftBloc4Styles>
           <h6>{event.titleevent5h6}</h6>
@@ -64,6 +65,18 @@ export default function Bloc4Event({ event }) {
           <Img fluid={event.imageevent5.asset.fluid} alt={event.titleevent5} />
         </DivRightBloc4Styles>
       </DivEventBloc4Styles>
+      :
+      <DivEventBloc4Styles>
+        <DivLeftBloc4Styles>
+          <h6>{destination.titledestination5h6}</h6>
+          <h3>{destination.titledestination5}</h3>
+          <p>{destination.contentdestination5}</p>
+        </DivLeftBloc4Styles>
+        <DivRightBloc4Styles>
+          <Img fluid={destination.imagedestination5.asset.fluid} alt={destination.titledestination5} />
+        </DivRightBloc4Styles>
+      </DivEventBloc4Styles>
+    }
     </SectionEventBloc4Styles>
   );
 }

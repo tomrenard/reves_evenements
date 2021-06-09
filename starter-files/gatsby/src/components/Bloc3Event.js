@@ -51,9 +51,10 @@ const DivRightBloc3Styles = styled.div`
   }
 `;
 
-export default function Bloc3Event({ event }) {
+export default function Bloc3Event({ event, destination }) {
   return(
     <SectionEventBloc3Styles>
+    { event ?
       <DivEventBloc3Styles>
         <DivLeftBloc3Styles>
           <Img fluid={event.imageevent4.asset.fluid} alt={event.titleevent4} />
@@ -64,6 +65,18 @@ export default function Bloc3Event({ event }) {
           <p>{event.contentevent4}</p>
         </DivRightBloc3Styles>
       </DivEventBloc3Styles>
+    :
+    <DivEventBloc3Styles>
+        <DivLeftBloc3Styles>
+          <Img fluid={destination.imagedestination4.asset.fluid} alt={destination.titledestination4} />
+        </DivLeftBloc3Styles>
+        <DivRightBloc3Styles>
+          <h6>{destination.titledestination4h6}</h6>
+          <h3>{destination.titledestination4}</h3>
+          <p>{destination.contentdestination4}</p>
+        </DivRightBloc3Styles>
+      </DivEventBloc3Styles>
+    }
     </SectionEventBloc3Styles>
   );
 }

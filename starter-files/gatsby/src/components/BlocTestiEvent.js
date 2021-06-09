@@ -51,9 +51,10 @@ const DivRightTestiEventStyles = styled.div`
   }
 `;
 
-export default function BlocTestiEvent({ event }) {
+export default function BlocTestiEvent({ event, destination }) {
   return(
     <SectionTestiEventStyles>
+      { event ?
       <DivTestiEventStyles>
         <DivLeftTestiEventStyles>
           <Img fluid={event.imageeventtesti1.asset.fluid} alt={event.authortestievent1} />
@@ -64,6 +65,18 @@ export default function BlocTestiEvent({ event }) {
           <p>{event.authortestievent1}</p>
         </DivRightTestiEventStyles>
       </DivTestiEventStyles>
+      :
+      <DivTestiEventStyles>
+        <DivLeftTestiEventStyles>
+          <Img fluid={destination.imagedestinationtesti1.asset.fluid} alt={destination.authortestidestination1} />
+        </DivLeftTestiEventStyles>
+        <DivRightTestiEventStyles>
+          <h6>{destination.testidestinationcompany1}</h6>
+          <h4>"{destination.testidestination1}"</h4>
+          <p>{destination.authortestidestination1}</p>
+        </DivRightTestiEventStyles>
+      </DivTestiEventStyles>
+    }
     </SectionTestiEventStyles>
   );
 }

@@ -8,6 +8,8 @@ import Bloc3Event from '../components/Bloc3Event';
 import Bloc4Event from '../components/Bloc4Event';
 import Bloc5Event from '../components/Bloc5Event';
 import BlocTestiEvent from '../components/BlocTestiEvent';
+import ContactForm from '../components/ContactForm';
+
 
 export default function SingleDestinationPage({ data }) {
   const destination = data.destination;
@@ -16,10 +18,10 @@ export default function SingleDestinationPage({ data }) {
       <HeaderEventTemplate destination={destination} />
       <Bloc1Event destination={destination} />
       <Bloc2Event destination={destination} />
-      {/*<Bloc3Event destination={destination} />
+      <Bloc3Event destination={destination} />
       <Bloc4Event destination={destination} />
-      <Bloc5Event destination={destination} />
-      <BlocTestiEvent destination={destination} />*/}
+      <BlocTestiEvent destination={destination} />
+      <ContactForm />
     </>
   );
 }
