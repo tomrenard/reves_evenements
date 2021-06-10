@@ -11,7 +11,7 @@ const SectionHeaderAboutStyles = styled.section`
 `;
 
 const DivHeaderAboutStyles = styled.div`
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
@@ -51,14 +51,14 @@ const DivFlexHeaderAboutStyles = styled.div`
   }
 `;
 
-export default function HeaderAbout() {
+export default function HeaderAbout({ aboutUs }) {
   return (
     <SectionHeaderAboutStyles>
       <DivHeaderAboutStyles>
         <DivFlexHeaderAboutStyles>
           <h6>ABOUT US</h6>
-          <h1>We bring people <span>together</span>. You make the <span>magic</span> happen.</h1>
-          <p>Calendly takes the busywork of scheduling off your to-do list so you can get more done. Thousands of teams across the globe use Calendly to make millions of 1-click meetings every week. Coordinate, connect, and nurture relationships all in one meeting lifecycle platform.</p>
+          <h1>Nous <span>rassemblons</span> les gens. Vous faites opérer la <span>magie</span>.</h1>
+          <p>{aboutUs.content1}</p>
         </DivFlexHeaderAboutStyles>
       </DivHeaderAboutStyles>
     </SectionHeaderAboutStyles>

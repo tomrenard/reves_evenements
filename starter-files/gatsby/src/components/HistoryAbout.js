@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
+
 
 const SectionHistoryAboutStyles = styled.section`
   background-position: center bottom;
@@ -11,18 +13,18 @@ const SectionHistoryAboutStyles = styled.section`
 `;
 
 const DivHistoryAboutStyles = styled.div`
-  padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const DivRightHistoryAboutStyles = styled.div`
   width: 100%;
-  max-width: 49%;
+  max-width: 40%;
   height: 100%;
  `;
 
@@ -30,9 +32,11 @@ const DivRightHistoryAboutStyles = styled.div`
  const DivLeftHistoryAboutStyles = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 45%;
   width: 100%;
   height: 100%;
+  margin-right: 56px;
   h3 {
     margin: 0;
     font-size: 2.3em;
@@ -44,20 +48,20 @@ const DivRightHistoryAboutStyles = styled.div`
   }
 `;
 
-export default function HistoryAbout() {
+export default function HistoryAbout({ aboutUs }) {
   return (
     <SectionHistoryAboutStyles>
       <DivHistoryAboutStyles>
         <DivLeftHistoryAboutStyles>
           <h3>
-            Hard-working technology born from hard work
+            {aboutUs.titlebloc2}
           </h3>
           <p>
-            Tope Awotona founded Calendly in 2013 through sheer grit, perseverance, and the complete and utter emptying of his personal savings accounts. With everything on the line, he turned his vision of simple scheduling for everyone into a vibrant, growing platform that manages scheduling for more than 9 million individuals and businesses.
+            {aboutUs.content2}
           </p>
         </DivLeftHistoryAboutStyles>
         <DivRightHistoryAboutStyles>
-          <p>pic</p>
+          <Img fluid={aboutUs.imagebloc2.asset.fluid} alt={aboutUs.titlebloc2} />
         </DivRightHistoryAboutStyles>
       </DivHistoryAboutStyles>
     </SectionHistoryAboutStyles>

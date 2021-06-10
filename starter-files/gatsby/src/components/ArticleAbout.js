@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
+
 
 const SectionArticleAboutStyles = styled.section`
   margin-top: 1em;
@@ -12,13 +14,14 @@ const SectionArticleAboutStyles = styled.section`
 
 const DivArticleAboutStyles = styled.div`
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
-const DivLeftArticleAboutStyles = styled.div`
+const DivRightArticleAboutStyles = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -26,27 +29,34 @@ const DivLeftArticleAboutStyles = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
   max-width: 50%;
-  h2 {
-    font-size: 3.5em;
+  h3 {
+    font-size: 2em;
     color: white;
+  }
+  p {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 100;
   }
 `;
 
-const DivRightArticleAboutStyles = styled.div`
+const DivLeftArticleAboutStyles = styled.div`
   width: 100%;
-  max-width: 49%;
+  max-width: 29%;
   height: 100%;
+  padding: 36px;
 `;
 
-export default function ArticleAbout() {
+export default function ArticleAbout({ aboutUs }) {
   return(
     <SectionArticleAboutStyles>
       <DivArticleAboutStyles>
         <DivLeftArticleAboutStyles>
-          <h2>L’agence Rêves d'Événements offre du sur-mesure</h2>
+          <Img fluid={aboutUs.imagebloc3.asset.fluid} alt={aboutUs.title3} />
         </DivLeftArticleAboutStyles>
         <DivRightArticleAboutStyles>
-          <p>pic</p>
+          <h3>"{aboutUs.content3}"</h3>
+          <p>{aboutUs.title3}</p>
         </DivRightArticleAboutStyles>
       </DivArticleAboutStyles>
     </SectionArticleAboutStyles>
