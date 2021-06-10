@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect';
-
+import { Link } from 'gatsby';
 
 const SectionHeaderStyles = styled.section`
   background-position: center bottom;
@@ -49,7 +49,7 @@ const DivLeftHeader = styled.div`
     font-size: 3.5em;
     }
   }
-  button {
+  a {
     align-self: center;
   }
   p {
@@ -67,13 +67,6 @@ const DivRightHeader = styled.div`
   height: 100%;
   @media (max-width: 900px) {
     margin-top: 2em;
-  }
-  Img {
-    @media (max-width: 900px) {
-      border-top: 1px solid red;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 `;
 
@@ -107,7 +100,7 @@ export default function Header() {
           }}/>
           </span></h1>
           <p>{content.text1}</p>
-          <button className="contact-button">Obtenir un devis</button>
+          <Link to="/contact"><button className="contact-button">Obtenir un devis</button></Link>
         </DivLeftHeader>
         <DivRightHeader>
           <Img fluid={content.image1.asset.fluid} alt={content.title1} />

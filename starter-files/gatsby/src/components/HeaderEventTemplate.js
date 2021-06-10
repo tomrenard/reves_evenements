@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image/withIEPolyfill';
+import { Link } from 'gatsby';
 
 const SectionHeaderEventStyles = styled.section`
   display: flex;
@@ -32,7 +33,7 @@ const DivRightHeader = styled.div`
     line-height: 1;
     letter-spacing: -0.01em;
   }
-  button {
+  a {
     align-self: center;
   }
   p {
@@ -62,7 +63,7 @@ export default function HeaderEventTemplate({ event, destination }) {
         <DivRightHeader>
           <h1>Organiser un <span>séminaire</span> d'entreprise</h1>
           <p>{event.contentevent1}</p>
-          <button className="contact-button">Obtenir un devis</button>
+          <Link to="/contact"><button className="contact-button">Obtenir un devis</button></Link>
         </DivRightHeader>
       </DivHeaderEventStyles>
       :
@@ -73,7 +74,7 @@ export default function HeaderEventTemplate({ event, destination }) {
         <DivRightHeader>
           <h1>Organiser un <span>voyage incentive</span> en France</h1>
           <p>{destination.contentdestination1}</p>
-          <button className="contact-button">Obtenir un devis</button>
+          <Link to="/contact"><button className="contact-button">Obtenir un devis</button></Link>
         </DivRightHeader>
       </DivHeaderEventStyles>
     }

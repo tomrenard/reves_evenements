@@ -83,10 +83,10 @@ export default function Footer() {
             <ul>
               <h3>Plan du site</h3>
               <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/">Événements</Link></li>
-              <li><Link to="/">Destinations</Link></li>
-              <li><Link to="/about">À propos</Link></li>
-              <li><Link to="/about">Contact</Link></li>
+              <li><Link to="/evenement/seminaires">Événements</Link></li>
+              <li><Link to="/destination/france">Destinations</Link></li>
+              <li><Link to="/qui-sommes-nous">À propos</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
         </DivFooterStyles>
       </SectionFooterStyles>

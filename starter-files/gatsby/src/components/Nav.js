@@ -151,7 +151,7 @@ export default function Nav() {
           <li>
             <div onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)} className="dropdown">
               <div className="drop">
-                <Link className="menu-to-hover" to="/">Événements
+                <Link className="menu-to-hover" to="/evenement/seminaires">Événements
                 {isShown1 ?
                 <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
                 : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
@@ -175,7 +175,7 @@ export default function Nav() {
           <li>
             <div onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)} className="dropdown">
               <div className="drop">
-                <Link className="menu-to-hover" to="/">Destinations
+                <Link className="menu-to-hover" to="/destination/france">Destinations
                 {isShown2 ?
                 <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
                 : <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }} />
@@ -197,10 +197,10 @@ export default function Nav() {
             </div>
           </li>
           <li>
-            <Link className="menu-to-hover" to="/about">À propos</Link>
+            <Link className="menu-to-hover" to="/qui-sommes-nous">À propos</Link>
           </li>
           <li>
-            <button>Nous contacter</button>
+            <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
       </NavStyles>

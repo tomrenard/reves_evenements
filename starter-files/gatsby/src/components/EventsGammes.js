@@ -142,7 +142,7 @@ const ContentCardGammesStyles = styled.div`
 export default function EventsGammes({ catEvents, events, event }) {
   const [activeType, setActiveType] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
-  let defaultFilter = event?.type || "Séminaires";
+  let defaultFilter = event?.type || "Team-buildings";
   const [activeFilter, setActiveFilter] = useState(defaultFilter);
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   let catEventsFiltered = catEvents;
@@ -176,17 +176,18 @@ export default function EventsGammes({ catEvents, events, event }) {
           </LeftColumnGammesStyles>
           <RightColumnGammesStyles>
             <RightGridGammesStyles>
-              {EventsFiltered.map(event => (
-                <CardGammesStyles key={event._id} className={event.typeevents.type}>
+              {EventsFiltered.map(e => (
+                <CardGammesStyles key={e._id} className={e.typeevents.type}>
                   <div>
-                    <Img fluid={event.imageevent.asset.fluid} alt={event.type} />
+                    <Img fluid={e.imageevent.asset.fluid} alt={e.type} />
                   </div>
                   <ContentCardGammesStyles>
-                  <h5>{event.type}</h5>
-                  <p>{event.contentevent}</p>
+                  <h5>{e.type}</h5>
+                  <p>{e.contentevent}</p>
                   { event ?
-                  <Link className='linkevent' to="/">Demander un devis <span>&#8594;</span></Link> :
-                  <Link className='linkevent' to={`/evenement/${event.typeevents.type.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "") }`}>En savoir plus <span>&#8594;</span></Link>
+                  <Link className='linkevent' to="/contact">Demander un devis <span>&#8594;</span></Link>
+                  :
+                  <Link className='linkevent' to={`/evenement/${e.typeevents.type.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "") }`}>En savoir plus <span>&#8594;</span></Link>
                   }
                   </ContentCardGammesStyles>
                 </CardGammesStyles>
