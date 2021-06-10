@@ -1,9 +1,10 @@
 import React from 'react';
+import HeaderAbout from '../components/HeaderAbout';
 
 export default function About() {
   return (
     <div>
-      <h1>Qui sommes-nous ?</h1>
+      <HeaderAbout />
     </div>
   );
 }
