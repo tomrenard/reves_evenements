@@ -14,6 +14,9 @@ const SectionHeaderStyles = styled.section`
   text-align: center;
   display: flex;
   justify-content: center;
+  @media (max-width: 900px) {
+    padding: 0px 24px;
+  }
 `;
 
 const DivHeaderStyles = styled.div`
@@ -64,6 +67,13 @@ const DivRightHeader = styled.div`
   height: 100%;
   @media (max-width: 900px) {
     margin-top: 2em;
+  }
+  Img {
+    @media (max-width: 900px) {
+      border-top: 1px solid red;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 `;
 
