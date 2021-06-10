@@ -32,6 +32,9 @@ export const query = graphql`
         contentvalue
         imagebloc2 {
           asset {
+            fixed(width: 200, height: 200) {
+              ...GatsbySanityImageFixed
+            }
             fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
             }
