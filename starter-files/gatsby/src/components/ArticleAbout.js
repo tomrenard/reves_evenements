@@ -28,7 +28,7 @@ const DivRightArticleAboutStyles = styled.div`
   flex-direction: column;
   padding-top: 80px;
   padding-bottom: 80px;
-  max-width: 50%;
+  max-width: 60%;
   h3 {
     font-size: 2em;
     color: white;
