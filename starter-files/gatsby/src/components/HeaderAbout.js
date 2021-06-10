@@ -45,6 +45,7 @@ const DivFlexHeaderAboutStyles = styled.div`
     margin-top: 48px;
     text-align: center;
     font-weight: 100;
+    line-height: 1.5;
   }
   span {
     color: var(--gold);
