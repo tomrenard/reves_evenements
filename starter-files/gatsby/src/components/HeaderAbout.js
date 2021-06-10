@@ -56,7 +56,7 @@ export default function HeaderAbout({ aboutUs }) {
     <SectionHeaderAboutStyles>
       <DivHeaderAboutStyles>
         <DivFlexHeaderAboutStyles>
-          <h6>ABOUT US</h6>
+          <h6>Qui sommes-nous ?</h6>
           <h1>Nous <span>rassemblons</span> les gens. Vous faites opérer la <span>magie</span>.</h1>
           <p>{aboutUs.content1}</p>
         </DivFlexHeaderAboutStyles>
