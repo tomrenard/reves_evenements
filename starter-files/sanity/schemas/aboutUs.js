@@ -31,5 +31,23 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'title3',
+      title: 'Page title bloc 3',
+      type: 'string',
+    },
+    {
+      name: 'content3',
+      title: 'Page content bloc 3',
+      type: 'string',
+    },
+    {
+      name: 'imagebloc3',
+      title: 'Image bloc 3',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
   ]
 };

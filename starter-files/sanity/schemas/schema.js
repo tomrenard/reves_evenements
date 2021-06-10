@@ -9,11 +9,12 @@ import aboutUs from './aboutUs';
 import testimonial from './testimonial';
 import eventcategory from './eventcategory';
 import destination from './destination';
+import value from './value';
 
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([event, eventcategory, destination, testimonial, homePage, aboutUs]),
+  types: schemaTypes.concat([event, eventcategory, destination, testimonial, homePage, aboutUs, value]),
 });
