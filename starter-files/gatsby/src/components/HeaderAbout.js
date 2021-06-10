@@ -12,7 +12,7 @@ const SectionHeaderAboutStyles = styled.section`
 
 const DivHeaderAboutStyles = styled.div`
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
 `;

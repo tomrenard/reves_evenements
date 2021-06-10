@@ -11,8 +11,8 @@ const SectionHistoryAboutStyles = styled.section`
 `;
 
 const DivHistoryAboutStyles = styled.div`
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
   display: flex;
