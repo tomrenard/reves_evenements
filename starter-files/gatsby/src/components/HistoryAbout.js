@@ -33,6 +33,15 @@ const DivRightHistoryAboutStyles = styled.div`
   max-width: 45%;
   width: 100%;
   height: 100%;
+  h3 {
+    margin: 0;
+    font-size: 2.3em;
+  }
+  p {
+    margin-top: 24px;
+    text-align: left;
+    font-weight: 100;
+  }
 `;
 
 export default function HistoryAbout() {
@@ -40,9 +49,9 @@ export default function HistoryAbout() {
     <SectionHistoryAboutStyles>
       <DivHistoryAboutStyles>
         <DivLeftHistoryAboutStyles>
-          <h2>
+          <h3>
             Hard-working technology born from hard work
-          </h2>
+          </h3>
           <p>
             Tope Awotona founded Calendly in 2013 through sheer grit, perseverance, and the complete and utter emptying of his personal savings accounts. With everything on the line, he turned his vision of simple scheduling for everyone into a vibrant, growing platform that manages scheduling for more than 9 million individuals and businesses.
           </p>
