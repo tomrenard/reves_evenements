@@ -20,12 +20,20 @@ const DivHistoryAboutStyles = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const DivRightHistoryAboutStyles = styled.div`
   width: 100%;
   max-width: 40%;
   height: 100%;
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
  `;
 
 
@@ -37,6 +45,10 @@ const DivRightHistoryAboutStyles = styled.div`
   width: 100%;
   height: 100%;
   margin-right: 56px;
+  @media (max-width: 900px) {
+    max-width: 80%;
+    order: 2;
+  }
   h3 {
     margin: 0;
     font-size: 2.3em;

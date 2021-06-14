@@ -29,6 +29,9 @@ const DivRightArticleAboutStyles = styled.div`
   padding-top: 80px;
   padding-bottom: 80px;
   max-width: 60%;
+  @media (max-width: 900px) {
+    max-width: 90%;
+  }
   h3 {
     font-size: 2em;
     color: white;
@@ -45,6 +48,9 @@ const DivLeftArticleAboutStyles = styled.div`
   max-width: 29%;
   height: 100%;
   padding: 36px;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 export default function ArticleAbout({ aboutUs }) {
