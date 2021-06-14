@@ -6,9 +6,6 @@ import Typewriter from 'typewriter-effect';
 import { Link } from 'gatsby';
 
 const SectionHeaderStyles = styled.section`
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
   margin-top: 5em;
   padding: 0px 40px;
   text-align: center;
@@ -36,7 +33,7 @@ const DivLeftHeader = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width: auto;
+  width: 100%;
   text-align: left;
   margin-right: 2.5em;
   min-width: 450px;
@@ -56,6 +53,7 @@ const DivLeftHeader = styled.div`
     font-size: 1.1em;
     line-height: 1.8;
     font-weight: 150;
+    display: inline;
   }
   span {
     color: var(--gold);
