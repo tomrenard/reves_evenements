@@ -17,6 +17,11 @@ const DivEventBloc4Styles = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const DivRightBloc4Styles = styled.div`
@@ -26,6 +31,9 @@ const DivRightBloc4Styles = styled.div`
   Img {
     border-radius: 20px;
   }
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
 `;
 
 const DivLeftBloc4Styles = styled.div`
@@ -34,6 +42,10 @@ const DivLeftBloc4Styles = styled.div`
   max-width: 45%;
   width: 100%;
   height: 100%;
+  @media (max-width: 900px) {
+    max-width: 80%;
+    order: 2;
+  }
   h3 {
     margin: 0;
     font-size: 2.3em;
@@ -44,6 +56,9 @@ const DivLeftBloc4Styles = styled.div`
     font-size: 0.8em;
     text-transform: uppercase;
     color: rgb(102, 102, 102);
+    @media (max-width: 900px) {
+    padding-top: 2em;
+    }
   }
   p {
     font-weight: 100;

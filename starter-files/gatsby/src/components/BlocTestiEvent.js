@@ -25,6 +25,9 @@ const DivLeftTestiEventStyles = styled.div`
   height: 100%;
   margin: 2em;
   margin-right: 8em;
+  @media (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const DivRightTestiEventStyles = styled.div`
@@ -34,6 +37,9 @@ const DivRightTestiEventStyles = styled.div`
   max-width: 40%;
   width: 100%;
   height: 100%;
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
   h6, h4, p {
     color: white;
   }

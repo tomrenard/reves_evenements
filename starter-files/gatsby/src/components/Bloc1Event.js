@@ -6,9 +6,6 @@ const SectionH2 = styled.section`
   display: flex;
   justify-content: center;
   padding: 0 40px;
-  @media (max-width: 900px) {
-    flex-flow: column wrap;
-  }
 `;
 
 const Div1EventBloc1Styles = styled.div`
@@ -40,6 +37,11 @@ const DivEventBloc1Styles = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const DivLeftBloc1Styles = styled.div`
@@ -49,6 +51,9 @@ const DivLeftBloc1Styles = styled.div`
   Img {
     border-radius: 20px;
   }
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
 `;
 
 const DivRightBloc1Styles = styled.div`
@@ -57,6 +62,9 @@ const DivRightBloc1Styles = styled.div`
   max-width: 45%;
   width: 100%;
   height: 100%;
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
   h3 {
     margin: 0;
     font-size: 2.3em;
@@ -67,6 +75,9 @@ const DivRightBloc1Styles = styled.div`
     font-size: 0.8em;
     text-transform: uppercase;
     color: rgb(102, 102, 102);
+    @media (max-width: 900px) {
+    padding-top: 2em;
+    }
   }
   p {
     font-weight: 100;
