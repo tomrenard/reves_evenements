@@ -5,9 +5,15 @@ import { Link } from 'gatsby';
 
 const SectionHeaderEventStyles = styled.section`
   display: flex;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
   justify-content: center;
   padding: 0 40px;
   margin-top: 5em;
+  @media (max-width: 900px) {
+    padding: 0px 24px;
+  }
 `;
 
 const DivHeaderEventStyles = styled.section`
@@ -19,6 +25,9 @@ const DivHeaderEventStyles = styled.section`
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1200px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 
 const DivRightHeader = styled.div`
@@ -27,11 +36,22 @@ const DivRightHeader = styled.div`
   flex-direction: column;
   max-width: 45%;
   padding-top: 1.5em;
+  @media (max-width: 900px) {
+    order: 1;
+    max-width: 100%;
+    margin: 1em auto;
+  }
   h1 {
     font-size: 4.5em;
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.01em;
+    @media (max-width: 1050px) {
+    font-size: 3em;
+    }
+    @media (max-width: 900px) {
+    text-align: center;
+    }
   }
   a {
     align-self: center;
@@ -50,6 +70,11 @@ const DivLeftHeader = styled.div`
   width: 100%;
   max-width: 45%;
   height: 100%;
+  @media (max-width: 900px) {
+    order: 2;
+    max-width: 60%;
+    margin: 1em auto;
+  }
 `;
 
 export default function HeaderEventTemplate({ event, destination }) {

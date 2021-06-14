@@ -6,6 +6,9 @@ const SectionH2 = styled.section`
   display: flex;
   justify-content: center;
   padding: 0 40px;
+  @media (max-width: 900px) {
+    flex-flow: column wrap;
+  }
 `;
 
 const Div1EventBloc1Styles = styled.div`
@@ -17,6 +20,10 @@ const Div1EventBloc1Styles = styled.div`
     font-size: 2.6em;
   }
   margin-bottom: 2em;
+  @media (max-width: 900px) {
+    text-align: center;
+    margin-top: -3em;
+  }
 `;
 
 const SectionEventBloc1Styles = styled.section`
