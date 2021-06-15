@@ -60,14 +60,14 @@ export default function HowItWorks() {
               <span>2.</span>
               <ContentHowItWorksStyles>
                 <h5>Planifions et organisons votre événement sur-mesure</h5>
-                <p>Sélection, prise de contact, négociation et coordination générale des différents partenaires et fournisseurs de l’événement ainsi que des aspects logistiques de l’évènement.</p>
+                <p>Sélectionnons ensemble les prestations de votre événement et mettons en place l'événement qui vous convient grâce à nos différents partenaires et fournisseurs.</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
             <ContainerHowItWorksStyles>
               <span>3.</span>
               <ContentHowItWorksStyles>
                 <h5>Soyez assuré que tout se passe comme prévu !</h5>
-                <p>Encadrement de l’événement le jour J pour vous garantir la fluidité du déroulement de l’événement.</p>
+                <p>Nous vous encadrons jusqu'au jour J pour vous garantir une organisation parfaite de votre événement.</p>
               </ContentHowItWorksStyles>
             </ContainerHowItWorksStyles>
         </HowItWorksStyles>

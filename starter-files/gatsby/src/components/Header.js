@@ -18,9 +18,11 @@ const SectionHeaderStyles = styled.section`
 
 const DivHeaderStyles = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1200px;
@@ -31,9 +33,11 @@ const DivHeaderStyles = styled.div`
 
 const DivLeftHeader = styled.div`
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
+  justify-content: flex-start;
   text-align: left;
   margin-right: 2.5em;
   min-width: 450px;
@@ -62,7 +66,6 @@ const DivLeftHeader = styled.div`
 
 const DivRightHeader = styled.div`
   width: 100%;
-  height: 100%;
   @media (max-width: 900px) {
     margin-top: 2em;
   }
