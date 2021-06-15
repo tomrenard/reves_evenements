@@ -104,7 +104,7 @@ const ColumnContentDropStyles = styled.div`
   align-items: flex-start;
   padding: 8px;
   h4 {
-    font-size: 0.8em;
+    font-size: 0.82em;
   }
   p {
     color: gray;
