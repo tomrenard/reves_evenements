@@ -11,7 +11,7 @@ export default {
     {
       name: 'text1',
       title: 'Paragraphe du header',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'image1',

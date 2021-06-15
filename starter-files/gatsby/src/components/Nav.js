@@ -107,9 +107,6 @@ const ColumnContentDropStyles = styled.div`
     font-weight: 100;
     font-size: 0.9em;
   }
-  a {
-    text-align: center;
-  }
 `;
 
 export default function Nav() {

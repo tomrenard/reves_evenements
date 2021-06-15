@@ -17,7 +17,7 @@ export default {
     {
       name: 'contentevent',
       title: 'Event content',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent',

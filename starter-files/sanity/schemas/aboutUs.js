@@ -11,7 +11,7 @@ export default {
     {
       name: 'content1',
       title: 'Page content bloc 1',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'titlebloc2',
@@ -21,7 +21,7 @@ export default {
     {
       name: 'content2',
       title: 'Content bloc 2',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagebloc2',
@@ -39,7 +39,7 @@ export default {
     {
       name: 'content3',
       title: 'Page content bloc 3',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagebloc3',

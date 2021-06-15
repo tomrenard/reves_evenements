@@ -16,7 +16,7 @@ export default {
     {
       name: 'content',
       title: 'Contenu témoignage',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagetestimonial',

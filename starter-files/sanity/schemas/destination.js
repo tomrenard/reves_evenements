@@ -11,7 +11,7 @@ export default {
     {
       name: 'contentmenudestination',
       title: 'Contenu menu',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'slug',
@@ -38,7 +38,7 @@ export default {
     {
       name: 'contentdestination1',
       title: 'Contenu paragraphe header',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination1',
@@ -66,7 +66,7 @@ export default {
     {
       name: 'contentdestination2',
       title: 'destination content bloc 2',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination2',
@@ -89,7 +89,7 @@ export default {
     {
       name: 'contentdestination3',
       title: 'destination content bloc 3',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination3',
@@ -112,7 +112,7 @@ export default {
     {
       name: 'contentdestination4',
       title: 'destination content bloc 4',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination4',
@@ -135,7 +135,7 @@ export default {
     {
       name: 'contentdestination5',
       title: 'destination content bloc 5',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination5',
@@ -158,7 +158,7 @@ export default {
     {
       name: 'contentdestination6',
       title: 'destination content bloc 6',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagedestination6',
@@ -171,7 +171,7 @@ export default {
     {
       name: 'testidestination1',
       title: 'Testimonial destination 1',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'testidestinationcompany1',

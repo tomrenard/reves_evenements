@@ -11,7 +11,7 @@ export default {
     {
       name: 'contentvalue',
       title: 'Value content',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imagebloc2',

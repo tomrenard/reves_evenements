@@ -11,7 +11,7 @@ export default {
     {
       name: 'contentmenuevent',
       title: 'Contenu menu',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'slug',
@@ -38,7 +38,7 @@ export default {
     {
       name: 'contentevent1',
       title: 'Contenu paragraphe header',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent1',
@@ -66,7 +66,7 @@ export default {
     {
       name: 'contentevent2',
       title: 'Event content bloc 2',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent2',
@@ -89,7 +89,7 @@ export default {
     {
       name: 'contentevent3',
       title: 'Event content bloc 3',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent3',
@@ -112,7 +112,7 @@ export default {
     {
       name: 'contentevent4',
       title: 'Event content bloc 4',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent4',
@@ -135,7 +135,7 @@ export default {
     {
       name: 'contentevent5',
       title: 'Event content bloc 5',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent5',
@@ -158,7 +158,7 @@ export default {
     {
       name: 'contentevent6',
       title: 'Event content bloc 6',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'imageevent6',
@@ -171,7 +171,7 @@ export default {
     {
       name: 'testievent1',
       title: 'Testimonial event 1',
-      type: 'string',
+      type: 'text',
     },
     {
       name: 'testieventcompany1',
