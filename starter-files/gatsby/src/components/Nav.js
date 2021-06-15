@@ -100,7 +100,8 @@ const ContentMenuDropdownStyles = styled.div`
 const ColumnContentDropStyles = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 8px;
   h4 {
     font-size: 0.8em;
