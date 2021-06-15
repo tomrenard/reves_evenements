@@ -102,10 +102,13 @@ const ColumnContentDropStyles = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 8px;
+  h4 {
+    font-size: 0.8em;
+  }
   p {
     color: gray;
     font-weight: 100;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 `;
 

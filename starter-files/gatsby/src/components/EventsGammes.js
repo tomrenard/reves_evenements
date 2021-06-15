@@ -142,7 +142,7 @@ const ContentCardGammesStyles = styled.div`
 export default function EventsGammes({ catEvents, events, event }) {
   const [activeType, setActiveType] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
-  let defaultFilter = event?.type || "Team-buildings";
+  let defaultFilter = event?.type || "Séminaires";
   const [activeFilter, setActiveFilter] = useState(defaultFilter);
   const EventsFiltered = events.filter(event => event.typeevents.type === `${activeFilter}`);
   let catEventsFiltered = catEvents;
