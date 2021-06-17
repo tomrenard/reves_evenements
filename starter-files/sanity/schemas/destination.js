@@ -36,7 +36,7 @@ export default {
       type: 'string',
     },
     {
-      name: 'spanheader',
+      name: 'spanheader1',
       title: 'Span header',
       type: 'string',
     },

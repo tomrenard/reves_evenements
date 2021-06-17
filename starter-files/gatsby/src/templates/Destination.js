@@ -35,8 +35,8 @@ export const query = graphql`
       contentdestination3
       contentdestination4
       contentdestination5
-      contentdestination6
       testidestination1
+      spanheader1
       testidestinationcompany1
       titledestination1
       titledestination2h2
@@ -47,8 +47,6 @@ export const query = graphql`
       titledestination4h6
       titledestination5
       titledestination5h6
-      titledestination6
-      titledestinationt6h6
       titletransidestination1
       type
       imagedestination1 {
@@ -80,13 +78,6 @@ export const query = graphql`
           }
       }
       imagedestination5 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-      }
-      imagedestination6 {
           asset {
             fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid

@@ -37,10 +37,10 @@ export const query1 = graphql`
       contentevent3
       contentevent4
       contentevent5
-      contentevent6
       testievent1
       testieventcompany1
       titleevent1
+      spanheader
       titleevent2h2
       titleevent2h6
       titleevent3
