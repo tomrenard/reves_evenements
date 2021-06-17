@@ -86,9 +86,9 @@ const NavStyles = styled.nav`
     background-color: white;
     max-width: 900px;
     width: 100%;
-    display: flex;
-    justify-content: center;
     padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 
@@ -98,10 +98,6 @@ const ContentMenuDropdownStyles = styled.div`
 `;
 
 const ColumnContentDropStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 8px;
   h4 {
     font-size: 0.82em;
@@ -166,7 +162,7 @@ export default function Nav() {
                 <div className="dropdown-content">
                  {events.map((event, index) => (
                   <ContentMenuDropdownStyles key={index}>
-                    <ColumnContentDropStyles>
+                    <ColumnContentDropStyles className="events-drop">
                       <Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link>
                       <p>{event.contentmenuevent}</p>
                     </ColumnContentDropStyles>
@@ -190,7 +186,7 @@ export default function Nav() {
                 <div className="dropdown-content">
                   {destinations.map((des, index) => (
                   <ContentMenuDropdownStyles key={index}>
-                    <ColumnContentDropStyles>
+                    <ColumnContentDropStyles className="des-drop">
                       <Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link>
                       <p>{des.contentmenudestination}</p>
                     </ColumnContentDropStyles>
