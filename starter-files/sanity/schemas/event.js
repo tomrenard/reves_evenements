@@ -36,6 +36,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'spanheader',
+      title: 'Span header',
+      type: 'string',
+    },
+    {
       name: 'contentevent1',
       title: 'Contenu paragraphe header',
       type: 'text',
@@ -140,29 +145,6 @@ export default {
     {
       name: 'imageevent5',
       title: 'Image event bloc 5',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'titleevent6',
-      title: 'Event title bloc 6',
-      type: 'string',
-    },
-    {
-      name: 'titleevent6h6',
-      title: 'Event title h6 bloc 6',
-      type: 'string',
-    },
-    {
-      name: 'contentevent6',
-      title: 'Event content bloc 6',
-      type: 'text',
-    },
-    {
-      name: 'imageevent6',
-      title: 'Image event bloc 6',
       type: 'image',
       options: {
         hotspot: true,

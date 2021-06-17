@@ -36,6 +36,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'spanheader',
+      title: 'Span header',
+      type: 'string',
+    },
+    {
       name: 'contentdestination1',
       title: 'Contenu paragraphe header',
       type: 'text',
@@ -140,29 +145,6 @@ export default {
     {
       name: 'imagedestination5',
       title: 'Image destination bloc 5',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'titledestination6',
-      title: 'destination title bloc 6',
-      type: 'string',
-    },
-    {
-      name: 'titledestinationt6h6',
-      title: 'destination title h6 bloc 6',
-      type: 'string',
-    },
-    {
-      name: 'contentdestination6',
-      title: 'destination content bloc 6',
-      type: 'text',
-    },
-    {
-      name: 'imagedestination6',
-      title: 'Image destination bloc 6',
       type: 'image',
       options: {
         hotspot: true,

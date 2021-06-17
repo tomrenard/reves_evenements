@@ -7,7 +7,6 @@ import Bloc1Event from '../components/Bloc1Event';
 import Bloc2Event from '../components/Bloc2Event';
 import Bloc3Event from '../components/Bloc3Event';
 import Bloc4Event from '../components/Bloc4Event';
-import Bloc5Event from '../components/Bloc5Event';
 import BlocTestiEvent from '../components/BlocTestiEvent';
 import ContactForm from '../components/ContactForm';
 import EventsGammes from '../components/EventsGammes';
@@ -23,7 +22,6 @@ export default function SingleEventPage({ data }) {
       <Bloc2Event event={event} />
       <Bloc3Event event={event} />
       <Bloc4Event event={event} />
-      <Bloc5Event event={event} />
       <BlocTestiEvent event={event} />
       <EventsGammes event={event} catEvents={catEvents} events={events} />
     </>
@@ -51,8 +49,6 @@ export const query1 = graphql`
       titleevent4h6
       titleevent5
       titleevent5h6
-      titleevent6
-      titleevent6h6
       titletransi1
       type
       imageevent1 {
@@ -84,13 +80,6 @@ export const query1 = graphql`
           }
       }
       imageevent5 {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-      }
-      imageevent6 {
           asset {
             fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid
