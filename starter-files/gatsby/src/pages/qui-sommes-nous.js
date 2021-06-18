@@ -10,7 +10,6 @@ import { graphql } from 'gatsby';
 export default function About({ data }) {
   const aboutUs = data.aboutus.nodes[0];
   const values = data.values.nodes;
-  console.log(data);
   return (
     <>
       <HeaderAbout aboutUs={aboutUs} />
