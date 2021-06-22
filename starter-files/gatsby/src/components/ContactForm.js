@@ -15,46 +15,23 @@ const SectionContactFormStyles = styled.section`
   }
 `;
 
-const ContactFormStyles = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em;
-  gap: 1em;
-  input {
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    line-height: normal;
-    color: #282828;
-    display: block;
-    width: 100%;
-    padding-left: 12px;
-  }
-  button {
-    width: 50%;
-  }
-`;
-
 export default function ContactForm() {
   return (
     <SectionContactFormStyles>
+    <form name="Contact Form" method="POST" data-netlify="true">
       <h2>Obtenir un devis gratuit !</h2>
       <ContactFormStyles>
-        <label>
-          <input type="text" placeholder="Votre nom et prénom" name="firstName-lastname" />
-        </label>
-        <label>
-          <input type="text" placeholder="Votre email" name="email" />
-        </label>
-        <label>
-          <input type="text" placeholder="Type d'événements" name="type" />
-        </label>
-        <label>
-          <input type="text" placeholder="Votre message" name="text-input" />
-        </label>
-        <button type="submit">Envoyer</button>
-      </ContactFormStyles>
+        <input type="hidden" name="form-name" value="Contact Form" />
+      <div>
+        <label>Votre email :</label>
+        <input type="email" name="email" />
+      </div>
+      <div>
+        <label>Message :</label>
+        <textarea name="message" />
+      </div>
+      <button type="submit">Send</button>
+    </form>
     </SectionContactFormStyles>
   );
 }
