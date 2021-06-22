@@ -18,18 +18,28 @@ const SectionContactFormStyles = styled.section`
 export default function ContactForm() {
   return (
     <SectionContactFormStyles>
-      <form name="Contact Form" method="POST" data-netlify="true">
+      <form name="Contact Form" method="POST" data-netlify="true" action="/">
         <h2>Obtenir un devis gratuit !</h2>
           <input type="hidden" name="form-name" value="Contact Form" />
         <div>
-          <label>Votre email :</label>
-          <input type="email" name="email" />
+          <input placeholder="Votre nom et prénom" name="nom" />
         </div>
         <div>
-          <label>Message :</label>
-          <textarea name="message" />
+          <input placeholder="Votre email" type="email" name="email" />
         </div>
-        <button type="submit">Send</button>
+        <div>
+          <select name="type">
+            <option value="autres">Type d'événements</option>
+            <option value="séminaires">Séminaire</option>
+            <option value="soirées d'entreprise">Soirée d'entreprise</option>
+            <option value="team-buildings">Team building</option>
+            <option value="voyages incentives">Voyage incentive</option>
+          </select>
+        </div>
+        <div>
+          <textarea placeholder="Votre message" name="message" />
+        </div>
+        <button type="submit">Envoyer</button>
       </form>
     </SectionContactFormStyles>
   );
