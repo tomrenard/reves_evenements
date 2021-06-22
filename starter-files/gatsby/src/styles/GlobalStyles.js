@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
     a {
       color: white;
     }
-    font: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     justify-content: center;
     display: inline-flex;
@@ -50,6 +50,8 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     &:hover {
       background-color: var(--gold);
+      transition: 0.25s;
+      border-radius: 20px;
     }
   }
 
