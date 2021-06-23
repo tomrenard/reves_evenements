@@ -17,6 +17,7 @@ const DivFooterStyles = styled.footer`
   max-width: 1200px;
   padding: 20px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-around;
   text-align: left;

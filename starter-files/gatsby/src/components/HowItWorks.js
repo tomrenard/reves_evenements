@@ -15,6 +15,7 @@ const DivHowItWorksStyles = styled.div`
 const HowItWorksStyles = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   height: 100%;
 `;
@@ -26,9 +27,6 @@ const ContainerHowItWorksStyles = styled.div`
     margin-right: 8px;
     font-size: 1.3em;
     color: var(--gold);
-  }
-  @media (max-width: 900px) {
-    flex-wrap: wrap;
   }
 `;
 
