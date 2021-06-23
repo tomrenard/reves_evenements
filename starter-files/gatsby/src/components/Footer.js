@@ -65,8 +65,8 @@ export default function Footer() {
         <DivFooterStyles>
             <ul>
               <h3>Rêves d'Événements</h3>
-              <li><Link target="_blank" to="https://www.instagram.com/revesdevoyages_bruz/?hl=fr">Instagram</Link></li>
-              <li><Link target="_blank" to="https://www.facebook.com/revesdevoyages/">Facebook</Link></li>
+              <li><a target="_blank" to="https://www.instagram.com/revesdevoyages_bruz/?hl=fr">Instagram</a></li>
+              <li><a target="_blank" to="https://www.facebook.com/revesdevoyages/">Facebook</a></li>
             </ul>
             <ul>
               <h3>Événements</h3>

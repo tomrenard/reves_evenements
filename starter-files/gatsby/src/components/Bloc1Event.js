@@ -11,8 +11,10 @@ const SectionH2 = styled.section`
 const Div1EventBloc1Styles = styled.div`
   max-width: 1200px;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   h2 {
     font-size: 2.6em;
   }
@@ -32,10 +34,11 @@ const SectionEventBloc1Styles = styled.section`
 const DivEventBloc1Styles = styled.div`
   margin: 40px auto;
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   @media (max-width: 900px) {
     flex-direction: column;

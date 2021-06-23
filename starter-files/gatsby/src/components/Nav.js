@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logo from '../assets/images/logotest.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoIosArrowUp } from 'react-icons/io';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { useStaticQuery, graphql } from 'gatsby';
 
 
@@ -42,13 +43,24 @@ const NavStyles = styled.nav`
       padding: 0 40px;
     }
   }
-  ul {
+  .hamburger {
+    margin-right: 40px;
+    font-size: 2em;
+    cursor: pointer;
+    @media (min-width: 900px) {
+      display: none;
+    }
+  }
+  .menu-ul-home {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: auto;
     li {
       margin: 0px 20px;
+    }
+    @media (max-width: 900px) {
+      display: none;
     }
   }
   .menu-to-hover:hover {
@@ -147,7 +159,7 @@ export default function Nav() {
         <div className='logo'>
           <Link to="/"><img src={logo} alt="" /></Link>
         </div>
-        <ul>
+        <ul className="menu-ul-home">
           <li>
             <div onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)} className="dropdown">
               <div className="drop">
@@ -203,6 +215,9 @@ export default function Nav() {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
+        <div className="hamburger">
+          <GiHamburgerMenu />
+        </div>
       </NavStyles>
     </SectionNavStyles>
   );
