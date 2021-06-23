@@ -38,8 +38,8 @@ const ContentTestimonialHomePageStyles = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 900px) {
+  padding-left: 64px;
+  @media (max-width: 600px) {
     padding-left: 0px;
   }
   h6 {
