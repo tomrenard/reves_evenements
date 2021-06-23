@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const SectionContactFormStyles = styled.section`
   padding: 0px 40px;
-  margin-top: 2em;
   display: flex;
   justify-content: center;
 `;
@@ -14,6 +13,7 @@ const DivContactFormStyles = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
   h2 {
     font-weight: 700;
     line-height: 1.2;

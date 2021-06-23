@@ -1,15 +1,13 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm';
+import HeaderContact from '../components/HeaderContact';
 import styled from 'styled-components';
-
-const SectionContactStyles = styled.div`
-  margin-top: 124px;
-`;
 
 export default function Contact() {
   return (
-    <SectionContactStyles>
+    <>
+      <HeaderContact />
       <ContactForm />
-    </SectionContactStyles>
+    </>
   );
 }
