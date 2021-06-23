@@ -19,7 +19,7 @@ const DivFooterStyles = styled.footer`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: left;
   ul {
     list-style: none;

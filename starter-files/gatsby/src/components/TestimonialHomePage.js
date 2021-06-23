@@ -25,7 +25,6 @@ const DivTestimonialHomePageStyles = styled.div`
 
 const ContainerImgTestimonialHomePageStyles = styled.div`
   width: 100%;
-  height: 100%;
   overflow: hidden;
   border-radius: 40px;
   max-width: 390px;
@@ -39,7 +38,10 @@ const ContentTestimonialHomePageStyles = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 64px;
+
+  @media (max-width: 900px) {
+    padding-left: 0px;
+  }
   h6 {
     font-size: 0.8em;
     text-transform: uppercase;
@@ -135,7 +137,7 @@ export default function TestimonialHomePage( { testimonials }) {
               <h4>"{testimonial.content}"</h4>
               <p>{testimonial.author}</p>
               <LinkTestimonialHomePageStyles>
-                <a href="/">Découvrir nos prestations</a>
+                <a href="/evenement/seminaires">Découvrir nos prestations</a>
                 <button href="/"><AiOutlineArrowRight /></button>
               </LinkTestimonialHomePageStyles>
               <SelectorDivStyles>

@@ -40,7 +40,6 @@ const DivLeftHeader = styled.div`
   justify-content: flex-start;
   text-align: left;
   margin-right: 2.5em;
-  min-width: 450px;
   h1 {
     font-size: 5em;
     font-weight: 900;

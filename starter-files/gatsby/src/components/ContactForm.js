@@ -31,10 +31,13 @@ const FormStyles = styled.form`
     border: 3px solid #000;
     border-radius: 5px;
     padding: 8px;
-    min-width: 500px;
+    min-width: 300px;
     line-height: normal;
     margin: 8px 0px;
     font-family: 'Work-sans', sans-serif;
+    @media (min-width: 600px) {
+    width: 500px;
+  }
   }
   textarea {
     height: 100px;
