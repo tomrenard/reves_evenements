@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionHeaderAboutStyles = styled.section`
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   padding: 0px 40px;

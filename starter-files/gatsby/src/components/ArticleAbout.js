@@ -8,13 +8,14 @@ const SectionArticleAboutStyles = styled.section`
   background-color: var(--gold);
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: 0 40px;
+  @media (max-width: 900px) {
+    padding: 0 24px;
+  }
 `;
 
 const DivArticleAboutStyles = styled.div`
   width: 100%;
-  height: 100%;
   max-width: 1200px;
   display: flex;
   align-items: center;
@@ -26,11 +27,12 @@ const DivRightArticleAboutStyles = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-block: 80px;
   max-width: 60%;
   @media (max-width: 900px) {
-    max-width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-block: 40px;
   }
   h3 {
     font-size: 2em;
@@ -50,6 +52,7 @@ const DivLeftArticleAboutStyles = styled.div`
   padding: 36px;
   @media (max-width: 900px) {
     display: none;
+    width: 0;
   }
 `;
 

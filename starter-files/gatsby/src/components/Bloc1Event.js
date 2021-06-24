@@ -62,7 +62,7 @@ const DivLeftBloc1Styles = styled.div`
     border-radius: 20px;
   }
   @media (max-width: 900px) {
-    max-width: 80%;
+    max-width: 100%;
   }
 `;
 
@@ -73,7 +73,7 @@ const DivRightBloc1Styles = styled.div`
   width: 100%;
   height: 100%;
   @media (max-width: 900px) {
-    max-width: 80%;
+    max-width: 100%;
   }
   h3 {
     margin: 0;

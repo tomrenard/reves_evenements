@@ -36,7 +36,7 @@ const DivRightBloc4Styles = styled.div`
     border-radius: 20px;
   }
   @media (max-width: 900px) {
-    max-width: 80%;
+    max-width: 100%;
   }
 `;
 
@@ -47,7 +47,7 @@ const DivLeftBloc4Styles = styled.div`
   width: 100%;
   height: 100%;
   @media (max-width: 900px) {
-    max-width: 80%;
+    max-width: 100%;
     order: 2;
   }
   h3 {

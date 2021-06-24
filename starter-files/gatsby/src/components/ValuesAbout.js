@@ -20,6 +20,9 @@ const DivValuesAboutStyles = styled.div`
   h2 {
     font-size: 2.5em;
     margin-bottom: 2em;
+    @media (max-width: 900px) {
+      margin-bottom: 1em;
+    }
   }
 `;
 
