@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import logo from '../assets/images/logotest.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoIosArrowUp } from 'react-icons/io';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { FcMenu } from 'react-icons/fc';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { useStaticQuery, graphql } from 'gatsby';
 
 
@@ -107,10 +108,31 @@ const NavStyles = styled.nav`
   }
   .hamb-drop {
     display: none;
-  }
-  .clicked {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    padding: 0 24px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    &.clicked {
     display: block;
+    }
+    ul {
+      padding: 0;
+      li {
+        padding-block: 8px;
+        h4 {
+          font-weight: 100;
+        }
+        h2 {
+          padding-block: 8px;
+        }
+      }
+    }
   }
+
 `;
 
 const ContentMenuDropdownStyles = styled.div`
@@ -135,6 +157,12 @@ export default function Nav() {
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
   const [hamIsShown, setHamIsShown] = useState(false);
+  const [hamMenuClicked, setHamMenuClicked] = useState(false);
+  function loading(){
+    setTimeout(function(){
+        setHamMenuClicked = false;
+    }, 1000);
+}
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset)
@@ -225,11 +253,30 @@ export default function Nav() {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
-        <div onClick={()=> setHamIsShown(!hamIsShown)} className="hamburger">
-          <GiHamburgerMenu />
+        <div onClick={() => { setHamIsShown(!hamIsShown); setHamMenuClicked(false);}} className="hamburger">
+          { hamIsShown ?
+            <FcMenu />
+            :
+            <AiOutlineMenu />
+          }
         </div>
-        <div className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
-          <p>List menu</p>
+        <div onClick={() => setHamMenuClicked(!hamMenuClicked)} className={hamIsShown && !hamMenuClicked ? "hamb-drop clicked" : "hamb-drop"}>
+          <ul>
+          <li><h2>Événements</h2></li>
+          {events.map(event => (
+            <div className="menu-item-ham">
+              <li><Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link></li>
+            </div>
+            ))}
+          <li><h2>Destinations</h2></li>
+          {destinations.map(des => (
+            <div className="menu-item-ham2">
+              <li><Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link></li>
+            </div>
+            ))}
+          <li><Link to="/qui-sommes-nous"><h2>À propos</h2></Link></li>
+          <li><Link to="/contact"><h2>Nous contacter</h2></Link></li>
+          </ul>
         </div>
       </NavStyles>
     </SectionNavStyles>
