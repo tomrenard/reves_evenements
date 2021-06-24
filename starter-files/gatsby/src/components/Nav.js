@@ -106,6 +106,18 @@ const NavStyles = styled.nav`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .menu-item-ham {
+    display: none;
+    &.activated {
+      display: block;
+    }
+  }
+  .menu-item-ham2 {
+    display: none;
+    &.activated {
+      display: block;
+    }
+  }
   .hamb-drop {
     display: none;
     position: fixed;
@@ -117,7 +129,7 @@ const NavStyles = styled.nav`
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     &.clicked {
-    display: block;
+    display: inline-block;
     }
     ul {
       padding: 0;
@@ -128,6 +140,7 @@ const NavStyles = styled.nav`
         }
         h2 {
           padding-block: 8px;
+          cursor: pointer;
         }
       }
     }
@@ -158,11 +171,8 @@ export default function Nav() {
   const [isShown2, setIsShown2] = useState(false);
   const [hamIsShown, setHamIsShown] = useState(false);
   const [hamMenuClicked, setHamMenuClicked] = useState(false);
-  function loading(){
-    setTimeout(function(){
-        setHamMenuClicked = false;
-    }, 1000);
-}
+  const [menu1Clicked, setmenu1Clicked] = useState(false);
+  const [menu2Clicked, setmenu2Clicked] = useState(false);
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset)
@@ -253,24 +263,24 @@ export default function Nav() {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
-        <div onClick={() => { setHamIsShown(!hamIsShown); setHamMenuClicked(false);}} className="hamburger">
+        <div onClick={() => { setHamIsShown(!hamIsShown);}} className="hamburger">
           { hamIsShown ?
             <FcMenu />
             :
             <AiOutlineMenu />
           }
         </div>
-        <div onClick={() => setHamMenuClicked(!hamMenuClicked)} className={hamIsShown && !hamMenuClicked ? "hamb-drop clicked" : "hamb-drop"}>
+        <div onClick={() => setHamMenuClicked(!hamMenuClicked)} className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
           <ul>
-          <li><h2>Événements</h2></li>
+          <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
           {events.map(event => (
-            <div className="menu-item-ham">
+            <div className={menu1Clicked ? "menu-item-ham activated" : "menu-item-ham"}>
               <li><Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link></li>
             </div>
             ))}
-          <li><h2>Destinations</h2></li>
+          <li><h2 onClick={() => setmenu2Clicked(!menu2Clicked)}>Destinations<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
           {destinations.map(des => (
-            <div className="menu-item-ham2">
+            <div className={menu2Clicked ? "menu-item-ham2 activated" : "menu-item-ham2"}>
               <li><Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link></li>
             </div>
             ))}
