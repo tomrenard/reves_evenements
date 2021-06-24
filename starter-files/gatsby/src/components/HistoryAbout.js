@@ -4,12 +4,12 @@ import Img from 'gatsby-image';
 
 
 const SectionHistoryAboutStyles = styled.section`
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   padding: 0px 40px;
+  @media (max-width: 900px) {
+    padding: 0px 24px;
+  }
 `;
 
 const DivHistoryAboutStyles = styled.div`
@@ -48,6 +48,7 @@ const DivRightHistoryAboutStyles = styled.div`
   @media (max-width: 900px) {
     max-width: 80%;
     order: 2;
+    margin-right: 0px;
   }
   h3 {
     margin: 0;

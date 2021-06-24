@@ -9,6 +9,9 @@ const SectionTestiEventStyles = styled.section`
   justify-content: center;
   width: 100%;
   padding: 0 40px;
+  @media (max-width: 900px) {
+    padding: 0;
+  }
 `;
 
 const DivTestiEventStyles = styled.div`
@@ -54,6 +57,9 @@ const DivRightTestiEventStyles = styled.div`
   p {
     font-size: 1.1em;
     font-weight: 100;
+    @media (max-width: 600px) {
+      margin-bottom: 2em;
+    }
   }
 `;
 

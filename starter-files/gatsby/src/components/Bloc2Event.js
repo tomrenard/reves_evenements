@@ -6,6 +6,9 @@ const SectionEventBloc2Styles = styled.section`
   display: flex;
   justify-content: center;
   padding: 0 40px;
+  @media (max-width: 900px) {
+    padding: 0px 24px;
+  }
 `;
 
 const DivEventBloc2Styles = styled.div`
@@ -21,6 +24,7 @@ const DivEventBloc2Styles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px auto;
   }
 `;
 

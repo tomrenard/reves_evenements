@@ -49,6 +49,9 @@ const ContentTestimonialHomePageStyles = styled.div`
   }
   h4 {
     font-size: 1.7em;
+    @media (max-width: 600px) {
+      font-size: 1.4em;
+    }
   }
   p {
     font-weight: 600;
@@ -88,6 +91,9 @@ const SelectorDivStyles = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-top: 32px;
+  @media (max-width: 600px) {
+    margin-top: 18px;
+  }
 `;
 
 const SelectorStyles = styled.div`

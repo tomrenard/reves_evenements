@@ -15,9 +15,11 @@ const DivHowItWorksStyles = styled.div`
 const HowItWorksStyles = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   height: 100%;
+  @media (max-width: 700px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ContainerHowItWorksStyles = styled.div`
@@ -31,11 +33,14 @@ const ContainerHowItWorksStyles = styled.div`
 `;
 
 const ContentHowItWorksStyles = styled.div`
-  diplay: flex;
+  display: flex;
   flex-direction: column;
   h5 {
     font-size: 1.3em;
     font-weight: 500;
+    @media (max-width: 700px) {
+      margin-inline: 0;
+    }
   }
   p {
     font-weight: 100;

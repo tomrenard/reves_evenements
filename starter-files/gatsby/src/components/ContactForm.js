@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionContactFormStyles = styled.section`
-  padding: 0px 40px;
+  padding: 20px 40px;
   display: flex;
   justify-content: center;
 `;
@@ -36,8 +36,8 @@ const FormStyles = styled.form`
     margin: 8px 0px;
     font-family: 'Work-sans', sans-serif;
     @media (min-width: 600px) {
-    width: 500px;
-  }
+      width: 500px;
+    }
   }
   textarea {
     height: 100px;

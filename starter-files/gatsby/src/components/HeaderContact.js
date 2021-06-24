@@ -15,6 +15,9 @@ const DivHeaderContactStyles = styled.div`
   padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
+  @media (max-width: 700px) {
+    padding-block: 36px;
+  }
 `;
 
 const DivFlexHeaderContactStyles = styled.div`
@@ -37,7 +40,7 @@ const DivFlexHeaderContactStyles = styled.div`
     line-height: 1;
     letter-spacing: -0.01em;
     @media (max-width: 700px) {
-    font-size: 3.5em;
+    font-size: 3.2em;
     }
   }
   p {

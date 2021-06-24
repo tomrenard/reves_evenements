@@ -28,6 +28,7 @@ const DivHeaderStyles = styled.div`
   max-width: 1200px;
   @media (max-width: 900px) {
     flex-wrap: wrap;
+    padding-bottom: 20px;
   }
 `;
 
@@ -40,6 +41,9 @@ const DivLeftHeader = styled.div`
   justify-content: flex-start;
   text-align: left;
   margin-right: 2.5em;
+  @media (max-width: 900px) {
+    margin-right: 0;
+  }
   h1 {
     font-size: 5em;
     font-weight: 900;

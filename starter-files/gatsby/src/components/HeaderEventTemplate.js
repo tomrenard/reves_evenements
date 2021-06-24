@@ -13,6 +13,7 @@ const SectionHeaderEventStyles = styled.section`
   margin-top: 5em;
   @media (max-width: 900px) {
     padding: 0px 24px;
+    margin-top: 2em;
   }
 `;
 

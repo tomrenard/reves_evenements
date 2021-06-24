@@ -8,6 +8,9 @@ const SectionHeaderAboutStyles = styled.section`
   display: flex;
   justify-content: center;
   padding: 0px 40px;
+  @media (max-width: 900px) {
+    padding: 0px 24px;
+  }
 `;
 
 const DivHeaderAboutStyles = styled.div`
@@ -15,6 +18,10 @@ const DivHeaderAboutStyles = styled.div`
   padding-bottom: 60px;
   max-width: 1200px;
   width: 100%;
+  @media (max-width: 700px) {
+    padding-bottom: 18px;
+    padding-top: 100px;
+  }
 `;
 
 const DivFlexHeaderAboutStyles = styled.div`
@@ -37,7 +44,7 @@ const DivFlexHeaderAboutStyles = styled.div`
     line-height: 1;
     letter-spacing: -0.01em;
     @media (max-width: 700px) {
-    font-size: 3.5em;
+      font-size: 3.3em;
     }
   }
   p {
