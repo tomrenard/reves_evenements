@@ -132,7 +132,7 @@ const NavStyles = styled.nav`
     display: inline-block;
     }
     ul {
-      padding: 0;
+      padding-left: 8px;
       li {
         padding-block: 8px;
         h4 {
@@ -175,7 +175,7 @@ export default function Nav() {
   const [menu2Clicked, setmenu2Clicked] = useState(false);
   useEffect(() => {
     window.onscroll = () => {
-      setOffset(window.pageYOffset)
+      setOffset(window.pageYOffset);
     }
   }, []);
   const data = useStaticQuery(graphql`query NavMenuDropdown {
@@ -273,14 +273,14 @@ export default function Nav() {
         <div onClick={() => setHamMenuClicked(!hamMenuClicked)} className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
           <ul>
           <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
-          {events.map(event => (
-            <div className={menu1Clicked ? "menu-item-ham activated" : "menu-item-ham"}>
+          {events.map((event, index) => (
+            <div key={index+10000} className={menu1Clicked ? "menu-item-ham activated" : "menu-item-ham"}>
               <li><Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link></li>
             </div>
             ))}
           <li><h2 onClick={() => setmenu2Clicked(!menu2Clicked)}>Destinations<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
-          {destinations.map(des => (
-            <div className={menu2Clicked ? "menu-item-ham2 activated" : "menu-item-ham2"}>
+          {destinations.map((des, index) => (
+            <div key={index+10000} className={menu2Clicked ? "menu-item-ham2 activated" : "menu-item-ham2"}>
               <li><Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link></li>
             </div>
             ))}
