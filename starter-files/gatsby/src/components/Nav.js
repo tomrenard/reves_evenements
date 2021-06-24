@@ -42,6 +42,9 @@ const NavStyles = styled.nav`
     @media (max-width: 1300px) {
       padding: 0 40px;
     }
+    @media (max-width: 700px) {
+      padding: 0 24px;
+    }
   }
   .hamburger {
     margin-right: 40px;
@@ -102,6 +105,12 @@ const NavStyles = styled.nav`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  .hamb-drop {
+    display: none;
+  }
+  .clicked {
+    display: block;
+  }
 `;
 
 const ContentMenuDropdownStyles = styled.div`
@@ -125,6 +134,7 @@ export default function Nav() {
   const [offset, setOffset] = useState(0);
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
+  const [hamIsShown, setHamIsShown] = useState(false);
   useEffect(() => {
     window.onscroll = () => {
       setOffset(window.pageYOffset)
@@ -215,8 +225,11 @@ export default function Nav() {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
-        <div className="hamburger">
+        <div onClick={()=> setHamIsShown(!hamIsShown)} className="hamburger">
           <GiHamburgerMenu />
+        </div>
+        <div className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
+          <p>List menu</p>
         </div>
       </NavStyles>
     </SectionNavStyles>

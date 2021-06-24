@@ -47,7 +47,7 @@ const DivLeftHeader = styled.div`
   h1 {
     font-size: 5em;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: -0.01em;
     @media (max-width: 700px) {
     font-size: 3.5em;
