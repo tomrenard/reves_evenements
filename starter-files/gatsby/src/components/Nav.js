@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import logo from '../assets/images/logotest.png';
@@ -165,7 +165,7 @@ const ColumnContentDropStyles = styled.div`
   }
 `;
 
-export default function Nav() {
+export default function Nav({ location }) {
   const [offset, setOffset] = useState(0);
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);

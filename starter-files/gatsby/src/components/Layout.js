@@ -5,13 +5,14 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 import styled from 'styled-components';
 
-export default function Layout({ children }) {
+export default function Layout({ props, children, location }) {
+  console.log(props);
   return (
     <>
       <GlobalStyles />
       <Typography />
       <>
-        <Nav />
+        <Nav location={location} />
           {children}
         <Footer />
       </>
