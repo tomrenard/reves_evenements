@@ -119,6 +119,9 @@ const NavStyles = styled.nav`
       display: block;
     }
   }
+  .inactive {
+    display: none;
+  }
   .hamb-drop {
     display: none;
     position: fixed;
@@ -277,15 +280,27 @@ export default function Nav({ location }) {
             <AiOutlineMenu />
           }
         </div>
-        <div className={hamIsShown && !hamMenuClicked ? "hamb-drop clicked" : "hamb-drop"}>
-          <ul>
-          <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
+        <div className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
+          <ul className={hamMenuClicked ? "inactive" : ""}>
+          <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements
+          { menu1Clicked ?
+          <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em", color: "grey" }}/>
+          :
+          <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/>
+          }
+          </h2></li>
           {events.map((event, index) => (
             <div key={index+10000} className={menu1Clicked ? "menu-item-ham activated" : "menu-item-ham"}>
               <li><Link className="menu-to-hover" to={`/evenement/${event.slug.current}`}><h4>{event.type}</h4></Link></li>
             </div>
             ))}
-          <li><h2 onClick={() => setmenu2Clicked(!menu2Clicked)}>Destinations<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
+          <li><h2 onClick={() => setmenu2Clicked(!menu2Clicked)}>Destinations
+          {menu2Clicked ?
+          <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em", color: "grey" }}/>
+          :
+          <IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/>
+          }
+          </h2></li>
           {destinations.map((des, index) => (
             <div key={index+10000} className={menu2Clicked ? "menu-item-ham2 activated" : "menu-item-ham2"}>
               <li><Link className="menu-to-hover" to={`/destination/${des.slug.current}`}><h4>{des.type}</h4></Link></li>
