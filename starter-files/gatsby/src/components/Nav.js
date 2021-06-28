@@ -172,7 +172,6 @@ const ColumnContentDropStyles = styled.div`
 `;
 
 export default function Nav({ location }) {
-  const [hamMenuClicked, setHamMenuClicked] = useState(false);
   const [offset, setOffset] = useState(0);
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
@@ -181,13 +180,14 @@ export default function Nav({ location }) {
   const [menu2Clicked, setmenu2Clicked] = useState(false);
   useEffect(() => {
     return globalHistory.listen(({ action }) => {
-      if (action === 'PUSH') setHamMenuClicked(true)
+      if (action === 'PUSH') {
+        setHamIsShown(false);
+      }
     })
     window.onscroll = () => {
       setOffset(window.pageYOffset);
     }
-  }, [setHamMenuClicked]);
-  console.log(hamMenuClicked);
+  }, []);
   const data = useStaticQuery(graphql`query NavMenuDropdown {
     events: allSanityEvent {
       nodes {
@@ -273,15 +273,15 @@ export default function Nav({ location }) {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
-        <div onClick={() => { setHamIsShown(!hamIsShown); setHamMenuClicked(false);}} className="hamburger">
-          { hamIsShown && !hamMenuClicked ?
+        <div onClick={() => setHamIsShown(!hamIsShown) } className="hamburger">
+          { hamIsShown ?
             <FcMenu />
             :
             <AiOutlineMenu />
           }
         </div>
         <div className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
-          <ul className={hamMenuClicked ? "inactive" : ""}>
+          <ul>
           <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements
           { menu1Clicked ?
           <IoIosArrowUp style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em", color: "grey" }}/>
