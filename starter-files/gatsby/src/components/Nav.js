@@ -134,12 +134,14 @@ const NavStyles = styled.nav`
     ul {
       padding-left: 8px;
       li {
-        padding-block: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         h4 {
           font-weight: 100;
         }
         h2 {
-          padding-block: 8px;
+          padding-top: 8px;
+          padding-bottom: 8px;
           cursor: pointer;
         }
       }

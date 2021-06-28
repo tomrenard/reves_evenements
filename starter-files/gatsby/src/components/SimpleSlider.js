@@ -32,6 +32,10 @@ const ImgSliderStyles = styled.div`
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     font-weight: 400;
     font-size: 1.1em;
+    @media (max-width: 500px) {
+      font-size: 0.8em;
+      margin-left: 24px;
+    }
   }
 `;
 
