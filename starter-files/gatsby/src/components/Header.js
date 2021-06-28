@@ -72,6 +72,9 @@ const DivRightHeader = styled.div`
   @media (max-width: 900px) {
     margin-top: 2em;
   }
+  Img {
+    left: 10px;
+  }
 `;
 
 export default function Header() {
@@ -107,7 +110,7 @@ export default function Header() {
           <Link to="/contact"><button className="contact-button">Obtenir un devis</button></Link>
         </DivLeftHeader>
         <DivRightHeader>
-          <Img fluid={content.image1.asset.fluid} alt={content.title1} />
+          <Img style={{left: "12px"}}fluid={content.image1.asset.fluid} alt={content.title1} />
         </DivRightHeader>
       </DivHeaderStyles>
     </SectionHeaderStyles>
