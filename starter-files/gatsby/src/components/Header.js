@@ -72,9 +72,6 @@ const DivRightHeader = styled.div`
   @media (max-width: 900px) {
     margin-top: 2em;
   }
-  Img {
-    left: 10px;
-  }
 `;
 
 export default function Header() {

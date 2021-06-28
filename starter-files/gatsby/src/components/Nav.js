@@ -7,6 +7,7 @@ import { IoIosArrowUp } from 'react-icons/io';
 import { FcMenu } from 'react-icons/fc';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { useStaticQuery, graphql } from 'gatsby';
+import { globalHistory } from '@reach/router';
 
 
 const SectionNavStyles = styled.section`
@@ -168,18 +169,22 @@ const ColumnContentDropStyles = styled.div`
 `;
 
 export default function Nav({ location }) {
+  const [hamMenuClicked, setHamMenuClicked] = useState(false);
   const [offset, setOffset] = useState(0);
   const [isShown1, setIsShown1] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
   const [hamIsShown, setHamIsShown] = useState(false);
-  const [hamMenuClicked, setHamMenuClicked] = useState(false);
   const [menu1Clicked, setmenu1Clicked] = useState(false);
   const [menu2Clicked, setmenu2Clicked] = useState(false);
   useEffect(() => {
+    return globalHistory.listen(({ action }) => {
+      if (action === 'PUSH') setHamMenuClicked(true)
+    })
     window.onscroll = () => {
       setOffset(window.pageYOffset);
     }
-  }, []);
+  }, [setHamMenuClicked]);
+  console.log(hamMenuClicked);
   const data = useStaticQuery(graphql`query NavMenuDropdown {
     events: allSanityEvent {
       nodes {
@@ -265,14 +270,14 @@ export default function Nav({ location }) {
             <Link to="/contact"><button>Nous contacter</button></Link>
           </li>
         </ul>
-        <div onClick={() => { setHamIsShown(!hamIsShown);}} className="hamburger">
-          { hamIsShown ?
+        <div onClick={() => { setHamIsShown(!hamIsShown); setHamMenuClicked(false);}} className="hamburger">
+          { hamIsShown && !hamMenuClicked ?
             <FcMenu />
             :
             <AiOutlineMenu />
           }
         </div>
-        <div onClick={() => setHamMenuClicked(!hamMenuClicked)} className={hamIsShown ? "hamb-drop clicked" : "hamb-drop"}>
+        <div className={hamIsShown && !hamMenuClicked ? "hamb-drop clicked" : "hamb-drop"}>
           <ul>
           <li><h2 onClick={() => setmenu1Clicked(!menu1Clicked)}>Événements<IoIosArrowDown style={{ verticalAlign: "center", paddingLeft: "2px", fontSize: "0.65em" }}/></h2></li>
           {events.map((event, index) => (
