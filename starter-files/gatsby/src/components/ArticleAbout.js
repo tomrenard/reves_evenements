@@ -47,12 +47,13 @@ const DivRightArticleAboutStyles = styled.div`
 
 const DivLeftArticleAboutStyles = styled.div`
   width: 100%;
-  max-width: 29%;
+  max-width: 28%;
   height: 100%;
-  padding: 36px;
+  margin-top: 124px;
   @media (max-width: 900px) {
     display: none;
     width: 0;
+    margin-top: 0;
   }
 `;
 
