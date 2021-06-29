@@ -39,6 +39,9 @@ const DivLeftHeader = styled.div`
   flex-direction: column;
   text-align: left;
   margin-right: 2.5em;
+  .Typewriter__cursor {
+    color: white;
+  }
   @media (max-width: 900px) {
     margin-right: 0;
   }
