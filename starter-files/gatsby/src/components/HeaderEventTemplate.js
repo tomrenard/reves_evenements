@@ -33,8 +33,10 @@ const DivHeaderEventStyles = styled.section`
 
 const DivRightHeader = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 45%;
   padding-top: 1.5em;
   @media (max-width: 900px) {

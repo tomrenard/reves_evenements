@@ -36,9 +36,7 @@ const DivLeftHeader = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  align-items: flex-start;
   flex-direction: column;
-  justify-content: flex-start;
   text-align: left;
   margin-right: 2.5em;
   @media (max-width: 900px) {
